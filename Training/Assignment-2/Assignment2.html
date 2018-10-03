@@ -4,7 +4,7 @@
   <title>Assignment 2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">	
-  <link rel="stylesheet" type="text/css" href="cont.css"/>
+  <link rel="stylesheet" type="text/css" href="Assignment2.css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
 	GivenDate = new Date(GivenDate);
 
 	if(GivenDate > CurrentDate){
-	   return 0
+	   return 0;
 	}
 	else
 	{
@@ -84,22 +84,10 @@
 		document.getElementById('pn').innerHTML="Please fill the Phone Number";
 		flag=1;
 		}
-	}	
-	else(flag==0)
-	{
-		var table=document.getElementById("contact_info");
-	
-		var row=table.insertRow(1);
-		var cell1=row.insertCell(0);
-		var cell2=row.insertCell(1);
-		var cell3=row.insertCell(2);
-		var cell4=row.insertCell(3);
-		var cell5=row.insertCell(4);
-		
 		if (f_name[0] == f_name[0].toUpperCase())
 		{
 			cell1.innerHTML=f_name;
-			document.getElementById('fn').innerHTML="";
+			
 		}
 		else
 		{
@@ -112,7 +100,7 @@
 		if (l_name[0] == l_name[0].toUpperCase())
 		{
 			cell2.innerHTML=l_name;
-			document.getElementById('ln').innerHTML="";
+			
 		}
 		else
 		{
@@ -125,7 +113,7 @@
 		if (validate_email(email_id))
 		{
 			cell3.innerHTML=email_id;
-			document.getElementById('em').innerHTML="";			
+						
 		}
 		else
 		{
@@ -135,7 +123,7 @@
 		if (check_date(dob))
 		{
 			cell4.innerHTML=dob;	
-			document.getElementById('dm').innerHTML="";
+			
 		}
 		else
 		{
@@ -145,15 +133,39 @@
 		if (validate_phone(phone))
 		{
 			cell5.innerHTML=phone;	
-			document.getElementById('pn').innerHTML="";
+			
 		}
 		else
 		{
 		document.getElementById('pn').innerHTML="Please fill the Phone Number in the valid format";
 		}
+	}	
 
-	}
+	else(flag==0)
+	{
+		var table=document.getElementById("contact_info");
+	
+		var row=table.insertRow(1);
+		var cell1=row.insertCell(0);
+		var cell2=row.insertCell(1);
+		var cell3=row.insertCell(2);
+		var cell4=row.insertCell(3);
+		var cell5=row.insertCell(4);
+		
+		cell1.innerHTML=f_name;
+		cell2.innerHTML=l_name;
+		cell3.innerHTML=email_id;
+		cell4.innerHTML=dob;
+		cell5.innerHTML=phone;
+	
+	
 	document.getElementById("contact_form").reset();
+	document.getElementById('fn').innerHTML="";
+	document.getElementById('ln').innerHTML="";
+	document.getElementById('em').innerHTML="";
+	document.getElementById('dm').innerHTML="";
+	document.getElementById('pn').innerHTML="";
+	}
 	}
   </script>
   <script>
@@ -247,6 +259,6 @@
 </div>
 </div> 
 </div>
-<script src="cont.js"></script>
+
 </body>
 </html>
