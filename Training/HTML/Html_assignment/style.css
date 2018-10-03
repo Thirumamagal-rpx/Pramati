@@ -1,7 +1,5 @@
 <style>
 
-
-
 body {
 	padding: 2em;
 	width: 100%;
@@ -24,18 +22,14 @@ body {
 .icon_sprite a {
 	border-right: 1px solid;
 	padding: 0 26px;
-	
-	
 }
 
 .icon_sprite a:first-of-type {
 	margin-left: -31px;
-	
 }
 
 .icon_sprite a:last-of-type {
 	border-right: none;
-
 }
 
 .links {
@@ -68,7 +62,6 @@ body {
 }
 
 .SEO {
-	
 	padding: 5px;
 	float: right;
 	background-color: #FFF8DC;
@@ -130,6 +123,10 @@ body {
 	
 }
 
+<<<<<<< HEAD
 
 
 </style>
+=======
+</style>
+>>>>>>> 7e646867e8351989539209831ba0f2107702a13e
