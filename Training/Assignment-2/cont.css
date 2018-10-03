@@ -1,0 +1,125 @@
+*{
+	margin:0;
+	
+	
+}
+
+html {
+    font-size: 10px;
+    background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+	padding-right: 60px;
+    padding-left: 60px;
+}
+
+.container-fluid{
+	
+	background-image: url("background.jpg");
+	text-align:center;
+	width:100%;
+}
+
+.heading-font{
+	margin-top: 58px;
+    margin-bottom: -31px;
+    margin-right: 363px;
+
+}
+
+.banner_image{
+	float:left-side;	
+	
+}
+
+.font-head {
+
+    font-size: 30px;
+    padding-left: 492px;
+	float:center;
+	float: inline-start;
+}
+.row {
+    margin-right: -64px;
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+
+.col-md-5 {
+
+    width: 41.66666667%;
+    margin-block-start: 66px;
+
+}
+
+.form-group {
+
+   font-size :22px;
+	font-weight:700;
+	font-family: cursive;
+	margin:20px;
+	margin-bottom: 12px;
+	margin-top: 26px;
+    text-align:left;
+	margin-right: 63px;
+
+}
+
+.form-control{
+	width:100px;
+	height:40px;
+	font-size:10px;
+	font-family: cursive;
+	text-align:center;
+	
+}
+
+.Errmsg{
+	font-size:14px;
+	font-family:sans-serif;
+	text-align:center;
+	
+}
+
+.btn-btn-default{
+	font-family: cursive;
+	text-align:center;
+	margin-top: 22px;
+	font-size :22px;
+}
+
+.table table-striped{
+	
+	width:25%;
+	margin:72px auto;
+	font-family: cursive;
+	text-align:center;
+}
+
+.table th,td{
+	border:2px solid black;
+	padding: 5px;
+	text-align:center;
+}
+
+th{
+	font-size:15px;
+	font-family: cursive;
+	
+}
+
+td{
+	font-size:15px;
+	font-family: cursive;
+	
+}
+	
+.tablecont{
+	padding-top: 106px;
+	padding-left: 2px;
+}
+
+.col-md-7 {
+
+    width: 58.33333333%;
+    margin-block-start: 66px;
+
+}
