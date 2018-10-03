@@ -1,12 +1,20 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <title>Assignment 2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">	
   <link rel="stylesheet" type="text/css" href="cont.css"/>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <script>
-	function check_date(given_date){
+   function check_date(given_date){
 	var GivenDate = given_date;
 	var CurrentDate = new Date();
 	GivenDate = new Date(GivenDate);
@@ -45,7 +53,7 @@
 	var email_id = document.getElementById("email").value;
 	var dob  = document.getElementById("date").value;
 	var phone  = document.getElementById("phone").value;
-	
+	 var flag=0;
 	
 
 	if (!f_name || !l_name || !email_id || !dob || !phone)
@@ -53,26 +61,31 @@
 	if (!f_name)
 		{
 		document.getElementById('fn').innerHTML="Please fill the First name";
+		flag=1;
 		}
   
 	if (!l_name)
 		{
 		document.getElementById('ln').innerHTML="Please fill the Last name";
+		flag=1;
 		}
 	if (!email_id)
 		{
 		document.getElementById('em').innerHTML="Please fill the e-mail";
+		flag=1;
 		}
 	if (!dob)
 		{
 		document.getElementById('dm').innerHTML="Please fill the Date Of Birth";
+		flag=1;
 		}
 	if (!phone)
 		{
 		document.getElementById('pn').innerHTML="Please fill the Phone Number";
+		flag=1;
 		}
 	}	
-	else
+	else(flag==0)
 	{
 		var table=document.getElementById("contact_info");
 	
@@ -86,6 +99,7 @@
 		if (f_name[0] == f_name[0].toUpperCase())
 		{
 			cell1.innerHTML=f_name;
+			document.getElementById('fn').innerHTML="";
 		}
 		else
 		{
@@ -98,6 +112,7 @@
 		if (l_name[0] == l_name[0].toUpperCase())
 		{
 			cell2.innerHTML=l_name;
+			document.getElementById('ln').innerHTML="";
 		}
 		else
 		{
@@ -109,43 +124,38 @@
 
 		if (validate_email(email_id))
 		{
-			cell3.innerHTML=email_id;	
+			cell3.innerHTML=email_id;
+			document.getElementById('em').innerHTML="";			
 		}
 		else
 		{
-		alert("Please fill the Email in valid format");
+		document.getElementById('em').innerHTML="Please fill the e-mail in the valid format";
 		}
 
 		if (check_date(dob))
 		{
 			cell4.innerHTML=dob;	
+			document.getElementById('dm').innerHTML="";
 		}
 		else
 		{
-		alert("You have entered a future date");
+		document.getElementById('dm').innerHTML="You have entered a future date";
 		}
 		
 		if (validate_phone(phone))
 		{
 			cell5.innerHTML=phone;	
+			document.getElementById('pn').innerHTML="";
 		}
 		else
 		{
-		alert("Please fill the phone number in valid format");
+		document.getElementById('pn').innerHTML="Please fill the Phone Number in the valid format";
 		}
 
 	}
 	document.getElementById("contact_form").reset();
 	}
   </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <script>
     $(document).ready(function(){
         var date_input=$('input[name="date"]'); //our date input has the name "date"
@@ -168,7 +178,7 @@
 	<h2 class="heading-font">Contact Info</h2><br>
 <form id="contact_form">
 	<div class="form-group">
-	<img class="banner_image" src='C:\Users\thirumamagalm\Desktop\New folder (2)\BS.jpg'>
+	
 	    <div class="fname">First Name:
        	<input type="text" class="form-control" id="fname" name="fname" onblur="check(this.value)" placeholder="first name" onkeyup="javascript:capitalize_name(this.id, this.value);">
 			<span id="fn" class="Errmsg"></span>

@@ -19,10 +19,9 @@ html {
 }
 
 .heading-font{
-	margin-top: 58px;
-    margin-bottom: -31px;
-    margin-right: 363px;
-
+	margin-top: 92px;
+	margin-bottom: 4px;
+	margin-right: 44px;;
 }
 
 .banner_image{
@@ -57,10 +56,18 @@ html {
 	font-family: cursive;
 	margin:20px;
 	margin-bottom: 12px;
-	margin-top: 26px;
+	margin-top: 28px;
     text-align:left;
 	margin-right: 63px;
 
+}
+
+.form-inline .form-control {
+
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 130px;
 }
 
 .form-control{
@@ -69,6 +76,7 @@ html {
 	font-size:10px;
 	font-family: cursive;
 	text-align:center;
+	border-radius: 18px;
 	
 }
 
@@ -76,6 +84,7 @@ html {
 	font-size:14px;
 	font-family:sans-serif;
 	text-align:center;
+	color: #FF0000;
 	
 }
 
@@ -83,8 +92,10 @@ html {
 	font-family: cursive;
 	text-align:center;
 	margin-top: 22px;
-	font-size :22px;
+	font-size :20px;
+	margin-right: 42px;
 }
+
 
 .table table-striped{
 	
@@ -101,20 +112,20 @@ html {
 }
 
 th{
-	font-size:15px;
+	font-size:13px;
 	font-family: cursive;
 	
 }
 
 td{
-	font-size:15px;
+	font-size:13px;
 	font-family: cursive;
 	
 }
 	
 .tablecont{
-	padding-top: 106px;
 	padding-left: 2px;
+	padding-top: 141px;
 }
 
 .col-md-7 {
