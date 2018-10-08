@@ -7,9 +7,9 @@
 
 .icon_sprite {
 	float: right;
+	display: table;
 	padding-top: 20px;
 	padding-right: 2px;
-	display: table;
 }
 
 .icon_sprite a {
@@ -40,7 +40,6 @@
 	padding-bottom: 2px;
 }
 
-
 .Learn_Html {
 	float: left;
 	width: 33%;
@@ -60,11 +59,11 @@
 	float: right;
     	background-color: #FFF8DC;
     	height: 330px;
-    	width: 33%;
-    	border: 3px solid #DEB887;
-    	margin-top: 4px;
-    	margin-bottom: 4px;
-    	margin-right: 12px;
+    	width: 38%;
+   	border: 3px solid #DEB887;
+   	margin-top: 4px;
+   	margin-bottom: 4px;
+   	margin-right: 12px;
 	font-size: 24px;
 	display:table;
 }
@@ -82,7 +81,7 @@
 	
 }
 
-.heading_font {
+.heading_font  {
 	color: green;
 	padding: 0;
 	margin: 9px;
