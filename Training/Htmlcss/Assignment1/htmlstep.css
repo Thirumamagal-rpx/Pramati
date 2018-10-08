@@ -1,4 +1,5 @@
 
+
 .logo {
 	float: left;
 	width: 100%;
@@ -13,7 +14,7 @@
 }
 
 .icon_sprite a {
-	padding: 0px 22px;
+	padding: 0px 23px;
 	color: black;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .icon_sprite a:last-of-type {
-	margin-left: 13px;
+	margin-left: 7px;
 }
 .header {
 	padding: 3px;
@@ -113,6 +114,12 @@
 	padding-left: 14px;
 	color: black;
 }
+
+
+
+
+
+
 
 
 
