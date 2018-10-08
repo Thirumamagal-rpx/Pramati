@@ -7,23 +7,23 @@
 
 .icon_sprite {
 	float: right;
-	display: table;
 	padding-top: 20px;
 	padding-right: 2px;
 }
 
 .icon_sprite a {
-	padding: 0px 23px;
+	padding: 0px 20px;
 	color: black;
 }
 
 .icon_sprite a:first-of-type {
-	margin-left: -30px;;
+	margin-left: -32px;
 }
 
 .icon_sprite a:last-of-type {
-	margin-left: 7px;
+	margin-right: 4px;
 }
+
 .header {
 	padding: 3px;
 }
@@ -40,7 +40,7 @@
 	padding-bottom: 2px;
 }
 
-.Learn_Html {
+.Learn_Html{
 	float: left;
 	width: 33%;
 	margin-top: 22px;
@@ -58,12 +58,12 @@
 .SEO {
 	float: right;
     	background-color: #FFF8DC;
-    	height:437px;
+    	height:437px;;
     	width: 38%;
-   	border: 3px solid #DEB887;
-   	margin-top: 4px;
-   	margin-bottom: 4px;
-   	margin-right: 12px;
+    	border: 3px solid #DEB887;
+    	margin-top: 4px;
+    	margin-bottom: 4px;
+    	margin-right: 12px;
 	font-size: 24px;
 	display:table;
 }
@@ -81,7 +81,7 @@
 	
 }
 
-.heading_font  {
+.heading_font {
 	color: green;
 	padding: 0;
 	margin: 9px;
@@ -103,11 +103,11 @@
 	font-size: 14px;
 }
 
-.footer {
+.footer{
 	margin-top: 4px;
 }
 
-.footer a {
+.footer a{
 	padding-right: 10px;
 	padding-left: 14px;
 	color: black;
