@@ -1,0 +1,120 @@
+
+.logo {
+	float: left;
+	width: 100%;
+	padding-left: 3px;
+}
+
+.icon_sprite {
+	float: right;
+	padding-top: 20px;
+	padding-right: 2px;
+	display: table;
+}
+
+.icon_sprite a {
+	padding: 0px 22px;
+	color: black;
+}
+
+.icon_sprite a:first-of-type {
+	margin-left: -30px;;
+}
+
+.icon_sprite a:last-of-type {
+	margin-left: 13px;
+}
+.header {
+	padding: 3px;
+}
+
+.banner_image {
+	border-top: 1px dashed black;
+	border-bottom: 1px dashed black;
+	width: 100%;
+	padding: 4px;
+}
+
+.why_html {
+	border-bottom: 1px dashed #333;
+	padding-bottom: 2px;
+}
+
+
+.Learn_Html{
+	float: left;
+	width: 33%;
+	margin-top: 22px;
+	margin-bottom: 10px;
+	border-right: 1px dashed #333;
+}
+
+.Learn_CSS{
+	float: left;
+	width: 31%;
+	display: table;
+	margin-top: 22px;
+}
+
+.SEO {
+	float: right;
+    background-color: #FFF8DC;
+    height: 330px;
+    width: 33%;
+    border: 3px solid #DEB887;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 12px;
+	font-size: 24px;
+	display:table;
+}
+
+.link_right {
+	float: right;
+	margin-right: 6px;
+	margin-top: 60px;
+	color: black;
+}
+
+.group_content {
+	border-bottom: 1px dashed black;
+	display: flex;
+	
+}
+
+.heading_font  {
+	color: green;
+	padding: 0;
+	margin: 9px;
+	margin-top: 4px;
+	margin-bottom: -10px;
+	font-size: 35px;
+}
+
+.content_font {
+	font-size: 20px;
+	margin: 10px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+}
+
+.list {
+	list-style-image: url('bullet.png');
+	padding-bottom: 12px;
+	font-size: 14px;
+}
+
+.footer{
+	margin-top: 4px;
+}
+
+.footer a{
+	padding-right: 10px;
+	padding-left: 14px;
+	color: black;
+}
+
+
+
+
+

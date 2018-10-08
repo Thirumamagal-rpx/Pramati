@@ -9,7 +9,7 @@ function capitalize(str) {
 }
 
 function validate_email(email_id) {
-	var pattern = new RegExp(/^([a-zA-Z]+[\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/);
+	var pattern = new RegExp(/^[a-zA-Z]+[\w-\.]+@[\w-]+\.+[\w-]{2,4}?$/);
 	return pattern.test(email_id);
 }
 
@@ -19,15 +19,19 @@ function validate_phone(phone) {
 }
 
 $(document).ready(function () {
-	var date_input = $('input[name="date"]'); //our date input has the name "date"
+	var date_input = $('input[name="date"]'); 
 	var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
 	date_input.datepicker({
 		format: 'mm/dd/yyyy',
 		container: container,
 		todayHighlight: true,
 		autoclose: true,
-		endDate: '0d'
-	})
+		endDate: '0d',
+		success: function(label,element) {
+			$(".date_of_birth").text('');
+		},
+	});
+	
 	$('#fname').on('keyup', function () {
 		var fName = $('#fname');
 		fName.val(capitalize(fName.val().trim()));
@@ -64,6 +68,9 @@ $(document).ready(function () {
 		if (!email.trim()) {
 			$('#e_mail').text("Please enter the e-mail");
 		}
+		else if (!validate_email(email)) {
+			$('#e_mail').text("Please enter valid e-mail");
+		}
 		else {
 			$('#e_mail').text("");
 		}
@@ -72,7 +79,7 @@ $(document).ready(function () {
 	$('#date').on('blur', function () {
 		var dob = $('#date').val();
 		if (!dob.trim()) {
-			$('#date_of_birth').text("Please enter the e-mail");
+			$('#date_of_birth').text("Please enter the date of birth");
 		}
 		else {
 			$('#date_of_birth').text("");
@@ -84,11 +91,13 @@ $(document).ready(function () {
 		if (!phone.trim()) {
 			$('#phone_number').text("Please enter the phone number");
 		}
+		else if (!validate_phone(phone)) {
+			$('#phone_number').text("Please enter valid phone number");
+		}
 		else {
 			$('#phone_number').text("");
 		}
 	});
-
 
 	$('#submitBtn').on('click', function () {
 		$('#first_name').text("");
@@ -105,28 +114,17 @@ $(document).ready(function () {
 			if (!fName.trim()) {
 				$('#first_name').text("Please enter the first name");
 			}
-
 			if (!lName.trim()) {
 				$('#last_name').text("Please enter the last name");
 			}
 			if (!email.trim()) {
 				$('#e_mail').text("Please enter the e-mail");
 			}
-			else {
-				if (!validate_email(email)) {
-					$('#e_mail').text("Please enter valid e-mail");
-				}
-			}
 			if (!dob.trim()) {
 				$('#date_of_birth').text("Please enter the date of birth");
 			}
 			if (!phone) {
 				$('#phone_number').text("Please enter the phone number");
-			}
-			else {
-				if (!validate_phone(phone)) {
-					$('#phone_number').text("Please enter valid phone number");
-				}
 			}
 		}
 		else {
