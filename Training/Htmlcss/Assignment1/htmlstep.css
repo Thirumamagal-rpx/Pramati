@@ -13,7 +13,7 @@
 }
 
 .icon_sprite a {
-	padding: 0px 22px;
+	padding: 0px 23px;
 	color: black;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .icon_sprite a:last-of-type {
-	margin-left: 13px;
+	margin-left: 7px;
 }
 .header {
 	padding: 3px;
@@ -41,7 +41,7 @@
 }
 
 
-.Learn_Html{
+.Learn_Html {
 	float: left;
 	width: 33%;
 	margin-top: 22px;
@@ -49,7 +49,7 @@
 	border-right: 1px dashed #333;
 }
 
-.Learn_CSS{
+.Learn_CSS {
 	float: left;
 	width: 31%;
 	display: table;
@@ -58,13 +58,13 @@
 
 .SEO {
 	float: right;
-    background-color: #FFF8DC;
-    height: 330px;
-    width: 33%;
-    border: 3px solid #DEB887;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    margin-right: 12px;
+    	background-color: #FFF8DC;
+    	height: 330px;
+    	width: 33%;
+    	border: 3px solid #DEB887;
+    	margin-top: 4px;
+    	margin-bottom: 4px;
+    	margin-right: 12px;
 	font-size: 24px;
 	display:table;
 }
@@ -82,7 +82,7 @@
 	
 }
 
-.heading_font  {
+.heading_font {
 	color: green;
 	padding: 0;
 	margin: 9px;
@@ -104,11 +104,11 @@
 	font-size: 14px;
 }
 
-.footer{
+.footer {
 	margin-top: 4px;
 }
 
-.footer a{
+.footer a {
 	padding-right: 10px;
 	padding-left: 14px;
 	color: black;
