@@ -41,7 +41,7 @@
 }
 
 
-.Learn_Html{
+.Learn_Html {
 	float: left;
 	width: 33%;
 	margin-top: 22px;
@@ -49,7 +49,7 @@
 	border-right: 1px dashed #333;
 }
 
-.Learn_CSS{
+.Learn_CSS {
 	float: left;
 	width: 31%;
 	display: table;
@@ -82,7 +82,7 @@
 	
 }
 
-.heading_font  {
+.heading_font {
 	color: green;
 	padding: 0;
 	margin: 9px;
@@ -104,11 +104,11 @@
 	font-size: 14px;
 }
 
-.footer{
+.footer {
 	margin-top: 4px;
 }
 
-.footer a{
+.footer a {
 	padding-right: 10px;
 	padding-left: 14px;
 	color: black;
