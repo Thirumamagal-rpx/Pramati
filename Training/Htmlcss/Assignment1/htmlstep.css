@@ -9,6 +9,7 @@
 	float: right;
 	padding-top: 20px;
 	padding-right: 2px;
+	
 }
 
 .icon_sprite a {
@@ -23,7 +24,6 @@
 .icon_sprite a:last-of-type {
 	margin-right: 4px;
 }
-
 .header {
 	padding: 3px;
 }
@@ -40,6 +40,7 @@
 	padding-bottom: 2px;
 }
 
+
 .Learn_Html{
 	float: left;
 	width: 33%;
@@ -48,24 +49,27 @@
 	border-right: 1px dashed #333;
 }
 
-.Learn_CSS {
+.Learn_CSS{
 	float: left;
 	width: 31%;
-	display: table;
 	margin-top: 22px;
 }
 
 .SEO {
 	float: right;
-    	background-color: #FFF8DC;
-    	height:437px;;
-    	width: 38%;
-    	border: 3px solid #DEB887;
-    	margin-top: 4px;
-    	margin-bottom: 4px;
-    	margin-right: 12px;
+    background-color: #FFF8DC;
+    height:437px;;
+    width: 38%;
+				border: 3px solid #DEB887;
+				display: inline-table;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 12px;
 	font-size: 24px;
-	display:table;
+}
+
+.bullet{    
+	margin-left: 32px;
 }
 
 .link_right {
@@ -81,7 +85,7 @@
 	
 }
 
-.heading_font {
+.heading_font  {
 	color: green;
 	padding: 0;
 	margin: 9px;
@@ -105,6 +109,7 @@
 
 .footer{
 	margin-top: 4px;
+	text-align-last: right;
 }
 
 .footer a{
@@ -112,7 +117,6 @@
 	padding-left: 14px;
 	color: black;
 }
-
 
 
 
