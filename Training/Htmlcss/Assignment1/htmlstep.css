@@ -1,37 +1,43 @@
 
 .logo {
-	float: left;
 	width: 100%;
-	padding-left: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.icon_sprite {
-	float: right;
-	padding-top: 20px;
-	padding-right: 2px;
-	
+.nav_link{  
+	padding : 0;  
+	margin :  0;
+	float : right;
+	color : black;
 }
 
-.icon_sprite a {
-	padding: 0px 20px;
-	color: black;
+.text_center{
+	text-align: center;
 }
 
-.icon_sprite a:first-of-type {
-	margin-left: -32px;
+@media only screen and (max-width:600px){
+	.logo-img{
+		width:80px;
+	}
 }
 
-.icon_sprite a:last-of-type {
-	margin-right: 4px;
+.link {   
+  padding:0px 25px 0px 25px;  
+	border-right : 1px solid black;
+	color : black;
+	text-decoration : none;
 }
-.header {
-	padding: 3px;
+
+.last_link{
+	border-right:0;
 }
 
 .banner_image {
 	border-top: 1px dashed black;
-	border-bottom: 1px dashed black;
-	width: 100%;
+  border-bottom: 1px dashed black;
+  width: 100%;
 	padding: 4px;
 }
 
@@ -40,32 +46,27 @@
 	padding-bottom: 2px;
 }
 
-
-.Learn_Html{
+.Learn_html{
 	float: left;
 	width: 33%;
-	margin-top: 22px;
-	margin-bottom: 10px;
+	margin: 22px 0px 10px 0px;
 	border-right: 1px dashed #333;
 }
 
-.Learn_CSS{
+.Learn_css{
 	float: left;
 	width: 31%;
 	margin-top: 22px;
 }
 
-.SEO {
+.seo {
 	float: right;
-    background-color: #FFF8DC;
-    height:437px;;
-    width: 38%;
-				border: 3px solid #DEB887;
-				display: inline-table;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    margin-right: 12px;
-	font-size: 24px;
+  background-color: #FFF8DC;
+  height:437px;;
+  width: 38%;
+	border: 3px solid #DEB887;
+  display: inline-table;
+  margin:4px 12px 4px 0px;
 }
 
 .bullet{    
@@ -74,8 +75,7 @@
 
 .link_right {
 	float: right;
-	margin-right: 6px;
-	margin-top: 60px;
+  margin:60px 6px 0px 0px;
 	color: black;
 }
 
@@ -88,17 +88,13 @@
 .heading_font  {
 	color: green;
 	padding: 0;
-	margin: 9px;
-	margin-top: 4px;
-	margin-bottom: -10px;
+	margin: 4px 9px -10px 8px;
 	font-size: 35px;
 }
 
 .content_font {
 	font-size: 20px;
-	margin: 10px;
-	margin-bottom: 2px;
-	margin-left: 10px;
+	margin:10px 0px 2px 10px;
 }
 
 .list {
@@ -113,8 +109,7 @@
 }
 
 .footer a{
-	padding-right: 10px;
-	padding-left: 14px;
+	padding:0px 10px 0px 14px;
 	color: black;
 }
 
