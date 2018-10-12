@@ -20,13 +20,13 @@
 }
 
 @media only screen and (max-width:600px){
-.logo-img{
-    width:80px;
+	.logo-img{
+    	width:80px;
   }
 }
 
-.link {   
-  padding:0px 25px 0px 20px;  
+.header_link {   
+  	padding:0 25px 0 20px;  
 	border-right : 1px solid black;
 	color : black;
 	text-decoration : none;
@@ -38,7 +38,7 @@
 
 .banner_image {
 	border-bottom: 1px dashed black;
-  	width: 100%;
+  width: 100%;
 	padding: 4px;
 }
 
@@ -47,14 +47,14 @@
 	padding-bottom: 2px;
 }
 
-.Learn_html{
+.learn_html{
 	float: left;
 	width: 33%;
-	margin: 22px 0px 10px 0px;
+	margin: 22px 0 10px 0;
 	border-right: 1px dashed #333;
 }
 
-.Learn_css{
+.learn_css{
 	float: left;
 	width: 31%;
 	margin-top: 22px;
@@ -63,12 +63,12 @@
 
 .seo {
 	float: right;
- 	background-color: #FFF8DC;
+  	background-color: #FFF8DC;
   	height:437px;;
   	width: 38%;
 	border: 3px solid #DEB887;
   	display: inline-table;
-  	margin:4px 12px 4px 0px;
+  	margin:4px 12px 4px 0;
 }
 
 .bullet{    
@@ -77,13 +77,14 @@
 
 .link_right {
 	float: right;
-  	margin:60px 6px 0px 0px;
+  	margin:60px 6px 0 0;
 	color: black;
 }
 
 .group_content {
 	border-bottom: 1px dashed black;
 	display: flex;
+	
 }
 
 .heading_font  {
@@ -95,7 +96,7 @@
 
 .content_font {
 	font-size: 20px;
-	margin:10px 0px 2px 10px;
+	margin:10px 0 2px 10px;
 }
 
 .list {
@@ -111,7 +112,7 @@
 }
 
 .footer a{
-	padding:0px 10px 0px 14px;
+	padding:0 10px 0 14px;
 	color: black;
 }
 
