@@ -2,8 +2,10 @@
 .logo {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  	justify-content: space-between;
+  	padding:0 0 5px 7px;
+  	align-items: center;
+  	border-bottom: 1px dashed black;
 }
 
 .nav_link{  
@@ -19,12 +21,12 @@
 
 @media only screen and (max-width:600px){
 	.logo-img{
-		width:80px;
-	}
+    	width:80px;
+  }
 }
 
-.link {   
-  padding:0px 25px 0px 25px;  
+.header_link {   
+  	padding:0 25px 0 20px;  
 	border-right : 1px solid black;
 	color : black;
 	text-decoration : none;
@@ -35,8 +37,7 @@
 }
 
 .banner_image {
-	border-top: 1px dashed black;
-  border-bottom: 1px dashed black;
+	border-bottom: 1px dashed black;
   width: 100%;
 	padding: 4px;
 }
@@ -46,27 +47,28 @@
 	padding-bottom: 2px;
 }
 
-.Learn_html{
+.learn_html{
 	float: left;
 	width: 33%;
-	margin: 22px 0px 10px 0px;
+	margin: 22px 0 10px 0;
 	border-right: 1px dashed #333;
 }
 
-.Learn_css{
+.learn_css{
 	float: left;
 	width: 31%;
 	margin-top: 22px;
+	overflow:auto;
 }
 
 .seo {
 	float: right;
-  background-color: #FFF8DC;
-  height:437px;;
-  width: 38%;
+  	background-color: #FFF8DC;
+  	height:437px;;
+  	width: 38%;
 	border: 3px solid #DEB887;
-  display: inline-table;
-  margin:4px 12px 4px 0px;
+  	display: inline-table;
+  	margin:4px 12px 4px 0;
 }
 
 .bullet{    
@@ -75,7 +77,7 @@
 
 .link_right {
 	float: right;
-  margin:60px 6px 0px 0px;
+  	margin:60px 6px 0 0;
 	color: black;
 }
 
@@ -94,7 +96,7 @@
 
 .content_font {
 	font-size: 20px;
-	margin:10px 0px 2px 10px;
+	margin:10px 0 2px 10px;
 }
 
 .list {
@@ -106,10 +108,11 @@
 .footer{
 	margin-top: 4px;
 	text-align-last: right;
+	width:100%;
 }
 
 .footer a{
-	padding:0px 10px 0px 14px;
+	padding:0 10px 0 14px;
 	color: black;
 }
 
