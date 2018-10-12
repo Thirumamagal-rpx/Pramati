@@ -1,4 +1,3 @@
-
 function capitalize(str) {
 	if (str && str.length >= 1) {
 		var firstChar = str.charAt(0);
@@ -14,23 +13,31 @@ function validate_email(email_id) {
 }
 
 function validate_phone(phone) {
-	var ph_pattern = new RegExp(/^([6-9]+[\d]{9})?$/);
+	var ph_pattern = new RegExp(/([6-9]+[\d]{9})[A-Za-z]?$/);
 	return ph_pattern.test(phone);
 }
 
 $(document).ready(function () {
-	var date_input = $('input[name="date"]');
-	var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-	date_input.datepicker({
-		format: 'mm/dd/yyyy',
-		container: container,
-		todayHighlight: true,
-		autoclose: true,
-		endDate: '0d',
-		onClose:alert('wow'),
-		
-	})
 
+	$('#date').datepicker({
+    format: 'mm/dd/yyyy',
+    todayHighlight: true,
+    changeMonth: true,
+    changeYear: true,
+		autoclose: true,
+    maxDate: '+0d',
+    autoSize: true,
+		changeMonth: true,
+		changeYear: true,
+		showButtonPanel: true,
+		dateFormat: "mm/dd/yy",
+		onClose: function(date, datepicker) {
+			if (date = "#date") {
+				$('#date_of_birth').text(""); 
+			}
+		}
+	});
+	
 	$('#fname').on('keyup', function () {
 		var fName = $('#fname');
 		fName.val(capitalize(fName.val().trim()));
@@ -42,6 +49,7 @@ $(document).ready(function () {
 	});
 
 	$('#fname').on('blur', function () {
+
 		var fName = $('#fname').val();
 		if (!fName.trim()) {
 			$('#first_name').text("Please enter the first name");
@@ -60,7 +68,6 @@ $(document).ready(function () {
 			$('#last_name').text("");
 		}
 	});
-
 
 	$('#email').on('blur', function () {
 		var email = $('#email').val();
@@ -102,7 +109,7 @@ $(document).ready(function () {
 		$('#first_name').text("");
 		$('#last_name').text("");
 		$('#e_mail').text("");
-		$('#date_of_birth').text("");
+		$('#date').text("");
 		$('#phone_number').text("");
 		var fName = $("#fname").val();
 		var lName = $("#lname").val();
@@ -132,11 +139,8 @@ $(document).ready(function () {
 			$('#first_name').text("");
 			$('#last_name').text("");
 			$('#e_mail').text("");
-			$('#date_of_birth').text("");
+			$('#date').text("");
 			$('#phone_number').text("");
 		}
-
 	});
-
 });
-
