@@ -18,23 +18,6 @@ function validate_phone(phone) {
 }
 
 $(document).ready(function () {
-<<<<<<< HEAD
-=======
-	var date_input = $('input[name="date"]');
-	var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-	date_input.datepicker({
-		format: 'mm/dd/yyyy',
-		container: container,
-		todayHighlight: true,
-		autoclose: true,
-		endDate: '0d',
-  });
-  
-  $('#date').on('blur', function () {
-    var dob = $('#date').val();
-    $(".doberr").hide();
-  });
->>>>>>> 699ba0ddad467fb48075fa6aef27c29ff6fd3d05
 
 	$('#date').datepicker({
     format: 'mm/dd/yyyy',
