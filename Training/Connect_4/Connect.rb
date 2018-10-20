@@ -1,6 +1,4 @@
-
-
-class Connect
+  class Connect
   def initialize
     @turn = 'R'
     @board = [['.', '.', '.', '.', '.', '.', '.'],
@@ -16,16 +14,6 @@ class Connect
     puts '------------- Welcome to Connect Four -------------'
   end
 
-  def display
-    result = ""
-    @board.each do |r|
-      row = r.join('  ') + "\n"
-      result << row
-    end
-    puts result
-    result
-  end
-
   def ask_column
     col = nil
     if @turn == 'R'
@@ -37,13 +25,32 @@ class Connect
     until ["1", "2", "3", "4", "5", "6", "7"].include?(col) do
       print "Enter column to drop disk: "
       col = gets.chomp
-      
     end
     col.to_i - 1
   end
 
+  def drop(col)
+    row = nil
+    @board.to_enum.with_index.reverse_each do |r, i|
+      if r[col] == '.'
+        row = i
+        break
+      end
+    end
+    @board[row][col] = @turn
+    @last_drop = [row, col]
+  end
   
-    
+  def display
+    result = ""
+    @board.each do |r|
+      row = r.join('  ') + "\n"
+      result << row
+    end
+    puts result
+    result
+  end
+
   def switch_player
     if @turn == 'R'
       @turn = 'Y'
@@ -61,16 +68,20 @@ class Connect
     puts winner
     winner
   end
- 
 end
-
-  
-
+ 
 connect = Connect.new
 connect.start
 connect.display
-connect.ask_column
 
+loop do
+  column = connect.ask_column
+ 
+  connect.drop(column)
+  connect.display
+ 
+  connect.switch_player
+end
 
 
 
