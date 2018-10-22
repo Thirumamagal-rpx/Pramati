@@ -86,21 +86,16 @@ class ConnectFour
   end
 
   def gameover
-    @draw=false
-    @counter==42
     if @turn == 'R'
       winner = 'RED wins the game!'
-    else
+      else
       winner = 'YELLOW wins the game!' 
-     end
-     if @counter==42
-      puts "match Draw"
-      @draw=true
-      return false
     end
-    puts winner
-    winner
-  end
+    
+     puts winner
+     winner
+     
+ end
 
   private
 
