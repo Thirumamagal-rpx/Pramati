@@ -1,5 +1,6 @@
 class ConnectFour
   def initialize
+    $counter = 0
     @turn = 'R'
     @board = [['.', '.', '.', '.', '.', '.', '.'],
               ['.', '.', '.', '.', '.', '.', '.'],
@@ -8,6 +9,7 @@ class ConnectFour
               ['.', '.', '.', '.', '.', '.', '.'],
               ['.', '.', '.', '.', '.', '.', '.']]
     @last_drop = nil
+    
   end
 
   def start
@@ -22,20 +24,20 @@ class ConnectFour
     else
       puts "Now is YELLOW's turn."
     end
-
+    
     until ["1", "2", "3", "4", "5", "6", "7"].include?(col) do
       print "Enter column to drop disk: "
       col = gets.chomp
-
     end
     col.to_i - 1
   end
 
   def is_full?(col)
     @board.all? { |row| row[col] != '.' }
+   
   end
 
-  def drop(col)
+   def drop(col)
     row = nil
     @board.to_enum.with_index.reverse_each do |r, i|
       if r[col] == '.'
@@ -44,6 +46,7 @@ class ConnectFour
       end
     end
     @board[row][col] = @turn
+    $counter+=1
     @last_drop = [row, col]
   end
 
@@ -72,7 +75,6 @@ class ConnectFour
           break
         end
       end
-
       return true unless no_match
     end
   end
@@ -91,13 +93,11 @@ class ConnectFour
       else
       winner = 'YELLOW wins the game!' 
     end
-    
-     puts winner
-     winner
-     
- end
+    puts winner
+    winner
+  end
 
-  private
+ private
 
   def next_disk(disk, direction)
     row = disk[0] + direction[0]
@@ -115,14 +115,28 @@ connect_four.start
 connect_four.display
 
 loop do
+  if $counter == 42
+    puts "-----------DRAW-----------" 
+    break
+  end 
+
   column = connect_four.ask_column
   next if connect_four.is_full?(column)
-
+ 
   connect_four.drop(column)
   connect_four.display
 
-  break if connect_four.line_match?
+  if connect_four.line_match?
+    connect_four.gameover
+    break
+  end
+  
   connect_four.switch_player
+
 end
 
-connect_four.gameover
+
+
+
+
+
