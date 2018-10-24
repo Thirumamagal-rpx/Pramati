@@ -9,7 +9,6 @@ class ConnectFour
               ['.', '.', '.', '.', '.', '.', '.'],
               ['.', '.', '.', '.', '.', '.', '.']]
     @last_drop = nil
-    
   end
 
   def start
@@ -34,7 +33,6 @@ class ConnectFour
 
   def is_full?(col)
     @board.all? { |row| row[col] != '.' }
-   
   end
 
    def drop(col)
@@ -57,7 +55,6 @@ class ConnectFour
       result << row
     end
     puts result
-    result
   end
 
   def line_match?
@@ -80,17 +77,13 @@ class ConnectFour
   end
 
   def switch_player
-    if @turn == 'R'
-      @turn = 'Y'
-    else
-      @turn = 'R'
-    end
+    @turn = (@turn == 'R' ? 'Y' :  'R')
   end
 
   def gameover
     if @turn == 'R'
       winner = 'RED wins the game!'
-      else
+    else
       winner = 'YELLOW wins the game!' 
     end
     puts winner
@@ -116,7 +109,7 @@ connect_four.display
 
 loop do
   if $counter == 42
-    puts "-----------DRAW-----------" 
+    puts "-----------It's a DRAW-------------" 
     break
   end 
 
@@ -132,7 +125,6 @@ loop do
   end
   
   connect_four.switch_player
-
 end
 
 
