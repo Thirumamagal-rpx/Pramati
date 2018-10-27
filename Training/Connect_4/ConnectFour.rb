@@ -58,6 +58,7 @@ class ConnectFour
   end
 
   def line_match?
+    $count=0;
     directions = [[0, 1], [1, 1], [1, 0], [1, -1], [0, -1], [-1, -1], [-1, 0], [-1, 1]]
     loop do
       return false if directions.empty?
@@ -69,6 +70,7 @@ class ConnectFour
         disk = next_disk(disk, direction)
         if out_of_board?(disk) || @board[disk[0]][disk[1]] != @turn
           no_match = true
+          $count+=1;
           break
         end
       end
@@ -87,14 +89,13 @@ class ConnectFour
       winner = 'YELLOW wins the game!' 
     end
     puts winner
-    winner
   end
 
  private
 
   def next_disk(disk, direction)
     row = disk[0] + direction[0]
-    col = disk[1] + direction[1]
+    col = disk[1] + direction[1] 
     [row, col]
   end
 
@@ -119,7 +120,7 @@ loop do
   connect_four.drop(column)
   connect_four.display
 
-  if connect_four.line_match?
+  if connect_four.line_match? || $count==4
     connect_four.gameover
     break
   end
