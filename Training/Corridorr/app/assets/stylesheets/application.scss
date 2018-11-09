@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree 
+ *= require_self
+ */
+
+.cometo{  padding:20px;  margin: 0;padding-right: 40px;float:right;  }
+       .We{   padding-right:20px;   padding-left:20px; color: white;  }
+       .Apps{   padding-right:20px;   padding-left:20px; color: white; }
+       .sign_up{   padding-right:20px;   padding-left:20px;color: white;}
+       .login{   padding-right:15px;   padding-left:20px;color: white;}
+       .logout {   color: white;}
+
+       p, ol, ul,li
+        {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  margin-top: 45px;
+}
+
+.idea{
+  display: block;
+  margin-top: 50px;
+  float:left;
+  width:50%;
+  margin-left: 20px;
+  margin-right: 120px;
+ }
+
+ .single_image {
+  padding-top: 51px;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: block;
+}
+
+.sign {
+   /*osition: absolute;*/
+  
+   margin-top: 12px;
+    margin-left: 328px;
+    /*position: static;*/
+
+ }
+
+
+
+.field_for_errors {
+  /*position: relative;*/
+  padding: 2px;
+  background-color: red;
+  
+}
+
+.error_messages {
+  
+  width: 280px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  position: absolute;
+}
+
+ 
+
+  .footer {
+ margin-top:100px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   
+   text-align: center;
+    border-top: 204px none #1cbac8;
+}
+#footer .widget h3 {
+    font: 13px Montserrat, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.leave{
+  color: white;
+  background-image: url(https://corridor.pramati.com/wp-content/uploads/2016/03/Group-5_1-min.png);
+}
