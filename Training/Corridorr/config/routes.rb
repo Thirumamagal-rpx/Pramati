@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'launch/new'
+  # get 'launch/new'
 
   get 'apps/new'
 
   get '/apps/new' 
 
-   post 'launch/new', to: 'launch#show'
+   post 'launch/show' => 'launch#show'
 
 	get "log_out" => "sessions#destroy", :as => "log_out"
 
@@ -13,8 +13,8 @@ Rails.application.routes.draw do
 
   get "sign_up" => "users#new", :as => "sign_up"
 
-  # post 'launch/create'   => 'launch#create'
 
+ # post 'launch/create'   => 'launch#create'
   
 
  root :to => 'users#index'
