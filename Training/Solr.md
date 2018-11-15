@@ -15,8 +15,8 @@
 
 
 http://localhost:8983/solr/#/
-
-#Why search server?
+ 
+# Why search server?
 ```
  A relational database management system (RDBMS) is a database management system (DBMS) 
 RDMS not capable of relevancy search
@@ -44,24 +44,24 @@ RDMS lags on large volume of data
 -Ex: Index at back of the book.
 ```
 
-#Two types of inverted index:
+# Two types of inverted index:
 
 -Record-level inverted index- contains a list of references to documents for each word.
 
 -Word-level inverted index-contains the positions of each word within a document
 
-#Advantage:
+# Advantage:
 -Allows fast full text searches.
 -Easy to develop
 -Most popular data structure used in document retrieval systems
 
-#Steps:
+# Steps:
 
 -Fetch the Document
 -Stemming of Root Word
 -Record Document IDs
 
-#Forward Index:
+# Forward Index:
 ```
 -Mapping  from documents to words
 -Indexing is quite fast as it only append keywords as it move forwards.
@@ -70,7 +70,7 @@ RDMS lags on large volume of data
 -Ex:Table of contents in book.
 ```
 
-#Solr:
+# Solr:
 
 -Apache Solr is an open source search platform built upon a Java library called Lucene.
 
@@ -79,7 +79,7 @@ RDMS lags on large volume of data
 -Extensible architecture.
 
 
-#Solr Fundamentals:
+# Solr Fundamentals:
 ```
 -Searching
 
