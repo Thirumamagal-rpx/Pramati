@@ -48,6 +48,7 @@ Postgres database:
 ```
 Ex: rails new myapp -d= corridor_development
 rake db: create
+```
 
 #Configuring database.yml
 ```
@@ -87,9 +88,9 @@ production:
 
 ```
 
-``
-#features:
 
+#features:
+```
 #Active Record
 
 - Saves objects into the database.
@@ -103,9 +104,9 @@ production:
 - Three default environments: 
 
 - development, testing, and production.
-
-#Framework:
 ```
+#Framework:
+
 ```
 - A framework is a program, set of programs, and/or code library that writes most of your application for you. When you use a framework, your job is to write the parts of the application that make it do the specific things you want.
 
@@ -127,7 +128,7 @@ production:
 - Organizing that data (searching, sorting, messaging it) into a form that fits the needs of a given view.
 - This subsystem is implemented in ActionController, which is a data broker sitting between ActiveRecord (the database interface) and ActionView (the presentation engine).
 ```
-```
+
 
 #Active Record
 ```
@@ -165,6 +166,7 @@ class Subject < ActiveRecord::Base
 end
 ```
 # Migrations
+```
 - Rails Migration allows you to use Ruby to define changes to your database schema
 
 ```
@@ -188,7 +190,7 @@ Command:
 
 
 ```
-```
+
 
 # Controllers
 ```
@@ -200,5 +202,53 @@ rails g controller Book
 
 - When your application receives a request, the routing will determine which controller and action to run, then Rails creates an instance of that controller and runs the method with the same name as the action.
 
+Ex:
+
+class UsersController < ApplicationController
+  def index
+    @users = User.all
+  end 
+
+def new
+  @user = User.new
+end
+
+def create
+  @user = User.new(user_params)
+  if @user.save
+    redirect_to new_user_url, :notice => "Signed up!"
+  else
+    render "new"
+  end
+end
+
+
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+end
+
 
 ```
+
+
+#Routes:
+```
+- It's a way to redirect incoming requests to controllers and actions.
+
+- Open routes.rb file
+
+- The routes.rb file defines the actions available in the applications and the type of action such as get, post, and patch.
+
+- Use the following command to list all your defined routes, which are useful for tracking down routing problems in your application
+
+  - rake routes
+
+```
+
