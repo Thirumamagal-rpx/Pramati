@@ -1,0 +1,77 @@
+# What is gradle?
+
+- Gradle  is open source - focus on flexibility and performance.
+
+- Built scripts are written using Groovy or Kotlin
+
+- Official Android built tool
+
+- Provided and maintained by Android SDK tools team
+
+# Why Gradle?
+
+- Highly customizable -
+
+- Fast- quickly by reusing outputs from previous executions
+Powerful -official build tool for Android, support many popular languages
+
+
+---
+
+# Projects and tasks
+
+#### Gradle projects
+```
+Made up of one or more projects
+
+A project may represent a JAR library or web applications.
+
+
+Could be deploying you projects in staging or production environment
+
+Each project is made up of one or more tasks
+
+Task represents work which a build performs.
+```
+#### Gradle tasks
+```
+Like Compiling classes
+Creating Jar
+Generating Javadoc
+Publishing archives to repository
+
+- Default gradle task
+- Custom task
+```
+.gradle- local repository
+
+
+# Default gradle task
+
+# Custom Tasks in Gradle:
+```
+C:\Users\Thirumamagal>cd eclipse-workspace
+C:\Users\Thirumamagal\eclipse-workspace>cd Registration
+
+C:\Users\Thirumamagal\eclipse-workspace\Registration>gradle tasks
+In command prompt will show:
+Custom tasks tasks
+------------------
+sample - description for task
+
+For Output: Hello gradle
+C:\Users\Thirumamagal\eclipse-workspace\Registration>gradle sample
+
+In eclipse:
+In build.gradle:
+
+task sample{
+		
+		group"custom tasks"
+		description"description for task"
+		doLast{
+			
+			println"Hello gradle"
+		}
+}
+```
