@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Request_for</th>
+      <th>from</th>
+      <th>to</th>
+      <th>Reason for leaving</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @launches.each do |launch| %>
+      <tr>
+        <td><%= launch.Request_for %></td>
+        <td><%= launch.from %></td>
+        <td><%= launch.to %></td>
+        <td><%= launch.Reason %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

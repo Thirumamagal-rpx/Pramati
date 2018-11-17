@@ -1,0 +1,33 @@
+<!-- <h1>Launch#new</h1> -->
+
+<%=form_for :launch, url: '/launches/show' do |form| %>
+ 
+
+
+
+  <div class="field">
+    <%= form.label :Request_for %>
+    <%= form.select(:Request_for, Launch::LAUNCH_LIST) %>
+  </div>
+
+<div class="field">
+	 <%= form.label :from %>
+<input max-date name='leaveDate' id="leave-date" type="date" min='2017-12-10'>
+</div>
+  
+<div class="field">
+	 <%= form.label :to%>
+<input max-date name='leaveDate' id="leave-date" type="date" min='2017-12-10'>
+</div>
+
+<div class="field">
+	 <%= form.label :Reason %><br/>
+    <%= form.text_area :Reason %>
+</div>
+
+ <div class="actions">
+    <%= form.submit "Apply", class: "btn btn-primary" %>
+  </div>
+
+
+<%end%>

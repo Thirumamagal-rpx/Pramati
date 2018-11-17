@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Corridorr</title>
+    <%= csrf_meta_tags %>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- <div class="container"> -->
+
+ 
+
+<div class="card bg-dark text-white">
+      <div class="card-header">
+
+<div id="user_nav">
+	<a href="/users/"> <img src="https://corridor.pramati.com/wp-content/uploads/2015/12/logo_corridor_ev3.png" alt="Corridor" class="logo_transparent" ></a>
+	<div class="cometo">
+	 <a class="We" href="">HOW WE DO IT</a>
+          <!-- <a class="Apps" href="/users/#idea">APPS</a> -->
+  <% if current_user %>
+    <!-- Logged in as <%= current_user.email %>. -->
+    <a class="Apps" href="/apps/new">APPS</a>
+      <%= link_to "LOG OUT", log_out_path %>
+
+  <% else %>
+ 
+         <a class="Apps" href="/users/#idea">APPS</a>
+          <a class="sign_up" href="/users/new">SIGN UP</a>
+          <a class="login" href="/sessions/new ">LOGIN </a>
+          <i class="fa fa-search" ></i>
+        
+   <!-- <%= link_to "Sign up" , sign_up_path %>
+    <%= link_to "log in", log_in_path %>-->
+  <% end %>
+  </div>
+</div>
+</div>
+</div>
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+
+
+
+
+
+
+ 
+  <!--  <div class="card bg-dark text-white">
+      <div class="card-header">
+
+      <a href="/users/">  <img src="https://corridor.pramati.com/wp-content/uploads/2015/12/logo_corridor_ev3.png" alt="Corridor" class="logo_transparent"/></a>
+        
+        <div class="cometo">
+          <a class="We" href="">HOW WE DO IT</a>
+          <a class="Apps" href="/users/#idea">APPS</a>
+          <a class="sign_up" href="/users/new">SIGN UP</a>
+          <a class="login" href="/sessions/new">LOGIN </a>
+          <i class="fa fa-search" ></i>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+<%= yield %>
+
+<!-- </div> -->
+ 
+
+<div class="footer">
+    <div class="card bg-dark text-white">
+      <div class="card-footer"><div class="container" >
+      <div class="four columns">
+         <div id="text-2" class="widget widget_text">
+            <h3>CORRIDOR</h3>
+            <div class="textwidget">Helping foster innovation by investing in people and ideas. Combining technology expertise with entrepreneurial skills to help build creative solutions.</div>
+         </div>
+      </div>
+      <div class="four columns">
+         <div id="text-7" class="widget widget_text">
+            <div class="textwidget">
+               <p>&nbsp;</p>
+            </div>
+         </div>
+      </div>
+      <div class="four columns">
+         <div id="text-9" class="widget widget_text">
+            <div class="textwidget">
+               <p>&nbsp;</p>
+            </div>
+         </div>
+      </div>
+      <div class="four columns">
+         <div id="text-10" class="widget widget_text">
+            <h3>Contact Us</h3>
+            <div class="textwidget">
+               <p><a href="http://www.pramati.com/contact/" target="_blank">http://www.pramati.com/contact/</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+</div>
+</div>
+  
+  </body>
+</html>

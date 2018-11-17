@@ -1,0 +1,60 @@
+<!-- <div class="col-md-4 col-md-offset-4"> -->
+<!--  <div class="card bg-dark text-white">
+      <div class="card-header">
+
+      <a href="/users/">  <img src="https://corridor.pramati.com/wp-content/uploads/2015/12/logo_corridor_ev3.png" alt="Corridor" class="logo_transparent"/></a>
+        
+        <div class="cometo">
+          <a class="We" href="">HOW WE DO IT</a>
+          <a class="Apps" href="">APPS</a>
+          <a class="signup" href="/users/new">SIGN UP</a>
+          <a class="login" href="">LOGIN </a>
+          <i class="fa fa-search" ></i>
+        </div>
+      </div>
+    </div>
+ -->
+
+<div class="error">
+<div class="card-body">
+<%= form_for @user do |f| %>
+<% if @user.errors.any? %>
+
+
+      <div class="error_messages">
+         <h2>Form is invalid</h2>
+         <ul>
+            <% for message in @user.errors.full_messages %>
+            <li><%=message %></li>
+            <% end %>
+         </ul>
+      </div>
+      <% end %>
+   <!-- s -->
+   <div class="sign">
+      
+         <h1>Sign Up </h1>
+        <!--  <p> -->
+        	 <div class="field">
+            <%= f.label :email %><br/>
+            <%= f.text_field :email %>
+        </div>
+         <!-- </p> -->
+         <!-- <p> --> <div class="field">
+            <%= f.label :password %><br/>
+            <%= f.password_field :password %>
+        </div>
+         <!-- </p>
+         <p> --> <div class="field">
+            <%= f.label :password_confirmation %><br/>
+            <%= f.password_field :password_confirmation %>
+        </div>
+         
+         <div class="button"><%= f.submit %></div> </div>
+         <% end %>
+     </div> 
+ </div>
+  
+
+
+
