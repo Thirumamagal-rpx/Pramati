@@ -1,7 +1,9 @@
 ## Salesforce Trailhead:
 
 #### Salesforce:
+```
 Salesforce is a cloud-based CRM system that allows salespeople to track their sales, support people to track their cases, and the entire company's employees to collaborate with each other.
+```
 
 #### Terms in salesforce:
 ```
@@ -13,8 +15,9 @@ Salesforce is a cloud-based CRM system that allows salespeople to track their sa
 ```
 
 #### General Data Privacy Regulation (GDPR):
-
+```
 - Establishes rules for how companies, governments, and other entities can process the personal data of data subjects who are in the EU(European Union)
+```
 
 #### Key Changes:
 
@@ -74,18 +77,18 @@ Salesforce is a cloud-based CRM system that allows salespeople to track their sa
 
 ## Measures to protect personal data:
 ```
-### Encryption- 
+## Encryption- 
 Appropriate for sensitive personal data and specific types of data managed by highly regulated companies.
 
-### Pseudonymization- 
+## Pseudonymization- 
 To enable the use of data beyond the original purpose
 Constitute a sufficient safeguard against risks from profiling
 Considered as personal data under GDPR.
 
-### Anonymization-
+## Anonymization-
 If data is truly anonymized - Does not constitute personal data under GDPR.
 
-### Accountability-
+## Accountability-
 To ensure the personal data it controls is under the compliance with the principles of GDPR
 ```
 
@@ -129,44 +132,47 @@ Request that a data controller delete or remove their personal data
 
 ```
 
-Three mechanisms that Salesforce uses to facilitate cross-border data transfers:		
-Binding corporate rules -
-European data protection authorities to facilitate transfers of personal data from the European Economic Area (EEA) to countries outside the EEA.
-The EU-US Privacy Shield and Swiss-US Privacy Shield-
-These are frameworks designed by the US Department of Commerce, along with the European Commission and Swiss government, to provide companies with a mechanism for complying with European data protection requirements when they’re transferring personal data from Europe to the United States.
-Standard contractual clauses(“model clauses”)- 
-Legal contracts between parties who are transferring personal data from Europe to countries outside the EEA.
+## Three mechanisms that Salesforce uses to facilitate cross-border data transfers:		
+### Binding corporate rules -
+- European data protection authorities to facilitate transfers of personal data from the European Economic Area (EEA) to countries outside the EEA.
+- The EU-US Privacy Shield and Swiss-US Privacy Shield-
+- These are frameworks designed by the US Department of Commerce, along with the European Commission and Swiss government, to provide companies with a mechanism for complying with European data protection requirements when they’re transferring personal data from Europe to the United States.
+- Standard contractual clauses(“model clauses”)- 
+- Legal contracts between parties who are transferring personal data from Europe to countries outside the EEA.
 
 Compliance - act of obeying an order
 
-Preparing for Compliance with the GDPR
+## Preparing for Compliance with the GDPR
 
-Get Buy-in and Build Your Team
-Assess your organization
-Establish controls and processes
-Document compliance
+- Get Buy-in and Build Your Team
+- Assess your organization
+- Establish controls and processes
+- Document compliance
 
-Get Buy-in and Build Your Team:
+## Get Buy-in and Build Your Team:
 
 The first thing any organization can do is make sure its leadership is aware of the importance of compliance with the GDPR
 The next thing to do is identify the core team to work on the compliance effort. 
 
-Assess your organization:
+## Assess your organization:
 
-Once an organization has assembled its cross-functional team, the team can analyze the organization’s existing privacy and security efforts to identify the top areas of focus.
-As an organization identifies where it stores this data, the team can build a data inventory that shows, for each storage system, which type of data is stored there, where it came from, what it is used for, who has access to it, how it is secured, which third parties it is transferred to, and how long to keep it. 
-In going through this effort, the team can also identify all the third parties that the organization either receives personal data from, or transfers personal data to.
-From the analysis, organizations can create a register of data processing activities, and identify which activities pose high risks to data privacy. For each high-risk activity, organizations can carry out a data protection impact assessment to determine the actions they need to take to ensure that they’re properly protecting individual privacy rights.
+- Once an organization has assembled its cross-functional team, the team can analyze the organization’s existing privacy and security efforts to identify the top areas of focus.
 
-Establish controls and processes:
+- As an organization identifies where it stores this data, the team can build a data inventory that shows, for each storage system, which type of data is stored there, where it came from, what it is used for, who has access to it, how it is secured, which third parties it is transferred to, and how long to keep it. 
 
-Once an organization has a better understanding of its data, the team can create a roadmap of necessary operational and technological changes. The roadmap can ensure the organization has appropriate controls and processes,
+- In going through this effort, the team can also identify all the third parties that the organization either receives personal data from, or transfers personal data to.
+
+- From the analysis, organizations can create a register of data processing activities, and identify which activities pose high risks to data privacy. For each high-risk activity, organizations can carry out a data protection impact assessment to determine the actions they need to take to ensure that they’re properly protecting individual privacy rights.
+
+## Establish controls and processes:
+
+- Once an organization has a better understanding of its data, the team can create a roadmap of necessary operational and technological changes. The roadmap can ensure the organization has appropriate controls and processes,
 Document compliance:
 
-organization can compile copies of privacy notices and consent forms, the data inventory and register of data processing activities, written policies and procedures, training materials, internal company data transfer agreements, and vendor contracts. 
+- organization can compile copies of privacy notices and consent forms, the data inventory and register of data processing activities, written policies and procedures, training materials, internal company data transfer agreements, and vendor contracts. 
 
 ----------------------------------------------------------------------------------
-High impact,low effort:
+## High impact,low effort:
 
 creating a single custom object- High impact,low effort
 Building with platform: processes to be noted
@@ -177,13 +183,13 @@ Time-intensive, repetitive manual steps
 Impact on only a few departments
 
 
-Multi Tenant cloud:
+## Multi Tenant cloud:
 
-Sharing resources.
+- Sharing resources.
 
-Salesforce provides a core set of services to all our customers in the multi tenant cloud. No matter the size of your business, you get access to the same computing power, data storage, and core features.
+- Salesforce provides a core set of services to all our customers in the multi tenant cloud. No matter the size of your business, you get access to the same computing power, data storage, and core features.
 
-latest and greatest features with automatic, seamless upgrades three times a year.
+- latest and greatest features with automatic, seamless upgrades three times a year.
 
 Salesforce- data secure
 Is a cloud service
