@@ -114,21 +114,21 @@ To ensure the personal data it controls is under the compliance with the princip
 
 ## Individual Rights
 
-- Data Access-
-Right to confirm with a data controller whether the organization is processing their personal data
- Must provide the data subject with information about such processing.
-- Right to Object -
-Right to object processing of  personal data at any time.
-- Data Rectification -
-Request the controller to correct or complete personal data if inaccurate or incomplete.
-- Restriction of processing-
-Request that a controller stop access to and modification of their personal data.
-- Data portability-
-Right to ask a controller to provide their personal data in a structured, commonly used, and machine-readable format 
-- Right to Erasure(Right to be forgotten)-
-Request that a data controller delete or remove their personal data 
-	- when data no longer needed
-	- data subject withdraws consent
+ - Data Access-
+   - Right to confirm with a data controller whether the organization is processing their personal data
+   - Must provide the data subject with information about such processing.
+ - Right to Object -
+   - Right to object processing of  personal data at any time.
+ - Data Rectification -
+   - Request the controller to correct or complete personal data if inaccurate or incomplete.
+ - Restriction of processing-
+   - Request that a controller stop access to and modification of their personal data.
+ - Data portability-
+   - Right to ask a controller to provide their personal data in a structured, commonly used, and machine-readable format 
+ - Right to Erasure(Right to be forgotten)-
+   - Request that a data controller delete or remove their personal data 
+   - when data no longer needed
+   - data subject withdraws consent
 
 ```
 
@@ -295,7 +295,7 @@ Click Next, Next, and Save & New.
 In this type of relationship, one object is the master and another is the detail
 The master object controls certain behaviors of the detail object, like who can view the details data.
 When you’re creating master-detail relationships, you always create the relationship field on the detail object.
-``
+```
 Choose Master-Detail Relationship and click Next.
 For Related To, choose Property.
 Click Next.
@@ -304,23 +304,52 @@ Click Next, Next, and Save.
 Hierarchical relationships:
 special type of lookup relationship
 The main difference between the two is that hierarchical relationships are only available on the User object.
+
 ```
-
 ## Schema Builder:
-
+```
 Schema Builder is a tool that lets you visualize and edit your data model
 Schema Builder is a handy tool for introducing your Salesforce customizations to a co-worker or explaining the way data flows throughout your system
-
+```
 ## Creating objects:
-
-
 Creating fields:
-
-
-
-
-
 Sending Mass mails:
+
+## User Accounts:
+```
+Each person who accesses Salesforce must have a user account. The user account identifies the user. Settings for the user account
+determine what features and records the user can access
+```
+# Import your data:
+
+- Complete this task using Data Import Wizard.
+- The Data Import Wizard transfers your data from an existing data file into your Salesforce org.
+
+## Prepare to Import Data:
+
+- creating an export file.
+- mapping your existing data to Salesforce fields. 
+- cleaning your existing data. 
+
+### Creating an export file:
+
+- Choose how datas are mached to avoid duplication.
+Ex:  - same name but different email addresses
+ - You can import data from any source that can output data to a comma-delimited (.csv) file.
+
+## Import Method:
+
+- Data Import Wizard -> 50000 or fewer records.
+- Org uses personal Account -> Individual Import personal Account --> 50000 or fewer records.
+- Data to other objects -> If more than 50000 accounts ->use Data Loader or third party app.
+
+
+
+
+
+
+
+
 
 
 
