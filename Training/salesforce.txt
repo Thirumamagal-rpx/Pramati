@@ -1,0 +1,324 @@
+## Salesforce Trailhead:
+
+#### Salesforce:
+Salesforce is a cloud-based CRM system that allows salespeople to track their sales, support people to track their cases, and the entire company's employees to collaborate with each other.
+
+#### Terms in salesforce:
+```
+- Apps-----set of objects, fields, and other functionality that supports a business process.
+- Objects---- tables in salesforce database which stores information
+- Records---- Rows in object database tables.
+- Fields----columns in object database tables.
+- Release----Salesforce releases new products and features three times per year
+```
+
+#### General Data Privacy Regulation (GDPR):
+
+- Establishes rules for how companies, governments, and other entities can process the personal data of data subjects who are in the EU(European Union)
+
+#### Key Changes:
+
+## Basis of data processing: 
+ - In order to process personal data, organizations must have a lawful basis to process the data, such as to fulfill the performance of an agreement with the data subject or by obtaining the consent of a data subject.
+
+- Data subjects to grant broad consent to processing of their personal data when they register to use a service 
+
+## Compliance Obligations:  
+- Includes requirements that processors only process personal data in accordance with the controller’s instructions, not share data with other vendors without consent of the controller, and implement appropriate security measures.
+
+## Breach Notification:
+- Data controllers must report any data breach to their data protection authority -no later than 72 hrs.
+
+## High risk-Data controllers must report data breaches to the data subjects.
+- Data processors must also notify data controllers .
+
+## Data protection officer: 
+- Monitoring of data subjects.
+-To ensure the organization complies with privacy law.
+
+## Enforcement:
+- Authorities can fine companies up to the greater of €20 million or 4% of a company’s annual global revenue, based on the seriousness of the breach and damages incurred.
+
+## Use of processors: 
+- Data controllers must have written agreements with data processors
+- Ensure processors act only in accordance with the controller’s instructions,
+- Implement appropriate security measures to protect the data,
+- Assist the controller with its compliance obligations,
+- Return or destroy personal data at the end of the relationship, and 
+- comply with the provisions of GDPR applicable to processors.
+
+## Profiling:
+- GDPR places certain restrictions on the automated processing of personal data to evaluate a data subject—or, “profiling.”
+- Automated processes that can result in a significant impact on an individual
+- Considered high risk and are permitted only in limited cases.
+
+## Data subject rights:
+- Data subjects can request that data controllers provide them with access to all personal data the controller maintains about them.
+- The data be corrected, deleted, frozen, or made portable
+- They(Data subjects) can object to certain processing and revoke previously given consent
+
+## One-stop-shop:
+- provides a central point of enforcement for organizations
+- work with a lead supervisory authority for cross-border data protection issues.
+
+
+## Key principles of GDPR:
+```
+- Fairness and Transparency
+- Purpose Limitation
+- Data Minimization
+- Accuracy
+- Data Deletion
+- Security
+```
+
+## Measures to protect personal data:
+```
+### Encryption- 
+Appropriate for sensitive personal data and specific types of data managed by highly regulated companies.
+
+### Pseudonymization- 
+To enable the use of data beyond the original purpose
+Constitute a sufficient safeguard against risks from profiling
+Considered as personal data under GDPR.
+
+### Anonymization-
+If data is truly anonymized - Does not constitute personal data under GDPR.
+
+### Accountability-
+To ensure the personal data it controls is under the compliance with the principles of GDPR
+```
+
+#### Data controller responsible for:
+- Appointing a data protection officer
+- using the principles of “privacy by design” and “privacy by default.”using the principles of “privacy by design” and “privacy by default.”
+- Able to demonstrate compliance.
+
+
+# Methods to operationalize privacy principles:
+```
+## Privacy by design-
+- Idea that when organizations plan a new processing activity or develop or implement a new product, service, or feature.
+- Put appropriate safeguards in place to protect privacy.
+
+## Privacy by default- 
+- “privacy friendly” default settings when collecting, processing, or storing data.
+- Individuals choice- How much data is processed- default setting- least amount of processing.
+- Retention period- default setting- shortest possible retention period.
+
+## Data protection Impact Assessments- 
+- Analyses of new processing activities to identify and address privacy risks.
+
+## Individual Rights
+
+- Data Access-
+Right to confirm with a data controller whether the organization is processing their personal data
+ Must provide the data subject with information about such processing.
+- Right to Object -
+Right to object processing of  personal data at any time.
+- Data Rectification -
+Request the controller to correct or complete personal data if inaccurate or incomplete.
+- Restriction of processing-
+Request that a controller stop access to and modification of their personal data.
+- Data portability-
+Right to ask a controller to provide their personal data in a structured, commonly used, and machine-readable format 
+- Right to Erasure(Right to be forgotten)-
+Request that a data controller delete or remove their personal data 
+	- when data no longer needed
+	- data subject withdraws consent
+
+```
+
+Three mechanisms that Salesforce uses to facilitate cross-border data transfers:		
+Binding corporate rules -
+European data protection authorities to facilitate transfers of personal data from the European Economic Area (EEA) to countries outside the EEA.
+The EU-US Privacy Shield and Swiss-US Privacy Shield-
+These are frameworks designed by the US Department of Commerce, along with the European Commission and Swiss government, to provide companies with a mechanism for complying with European data protection requirements when they’re transferring personal data from Europe to the United States.
+Standard contractual clauses(“model clauses”)- 
+Legal contracts between parties who are transferring personal data from Europe to countries outside the EEA.
+
+Compliance - act of obeying an order
+
+Preparing for Compliance with the GDPR
+
+Get Buy-in and Build Your Team
+Assess your organization
+Establish controls and processes
+Document compliance
+
+Get Buy-in and Build Your Team:
+
+The first thing any organization can do is make sure its leadership is aware of the importance of compliance with the GDPR
+The next thing to do is identify the core team to work on the compliance effort. 
+
+Assess your organization:
+
+Once an organization has assembled its cross-functional team, the team can analyze the organization’s existing privacy and security efforts to identify the top areas of focus.
+As an organization identifies where it stores this data, the team can build a data inventory that shows, for each storage system, which type of data is stored there, where it came from, what it is used for, who has access to it, how it is secured, which third parties it is transferred to, and how long to keep it. 
+In going through this effort, the team can also identify all the third parties that the organization either receives personal data from, or transfers personal data to.
+From the analysis, organizations can create a register of data processing activities, and identify which activities pose high risks to data privacy. For each high-risk activity, organizations can carry out a data protection impact assessment to determine the actions they need to take to ensure that they’re properly protecting individual privacy rights.
+
+Establish controls and processes:
+
+Once an organization has a better understanding of its data, the team can create a roadmap of necessary operational and technological changes. The roadmap can ensure the organization has appropriate controls and processes,
+Document compliance:
+
+organization can compile copies of privacy notices and consent forms, the data inventory and register of data processing activities, written policies and procedures, training materials, internal company data transfer agreements, and vendor contracts. 
+
+----------------------------------------------------------------------------------
+High impact,low effort:
+
+creating a single custom object- High impact,low effort
+Building with platform: processes to be noted
+Heavy email collaboration
+Reliance on spreadsheets
+Shared local documents
+Time-intensive, repetitive manual steps
+Impact on only a few departments
+
+
+Multi Tenant cloud:
+
+Sharing resources.
+
+Salesforce provides a core set of services to all our customers in the multi tenant cloud. No matter the size of your business, you get access to the same computing power, data storage, and core features.
+
+latest and greatest features with automatic, seamless upgrades three times a year.
+
+Salesforce- data secure
+Is a cloud service
+
+
+
+
+
+
+Metadata:
+
+All of the standard and custom configurations, functionality, and code in your org are metadata.
+
+Salesforce knows how to store and serve you that metadata immediately after you create it. - To move fast in platform.
+
+
+API:(Application Programming Interface)
+
+Allows different pieces of software to connect to each other and exchange information.
+
+Without knowing the details, you can connect your apps with other apps or software systems.  The other details of how the information passes through the system is taken care of by other technologies.
+
+Job of Salesforce in API:
+ When you add a custom object or field, the platform automatically creates an API name that serves as an access point between your org and the database. Salesforce uses that API name to retrieve the metadata and data you’re looking for.
+
+
+Setup Area:
+
+Object Manager
+Setup Menu
+Main window
+
+
+Setup Menu:
+
+Administration-manage your users and data. Add users, change permissions, import and export data, and create email templates.
+
+Platform Tools-view and manage your data model, create apps, modify the user interface, and deploy new features to your users.
+Manage your code as well.
+
+Settings-Add business hours, change your locale, and view your org’s history.
+
+AppExchange:
+
+Hundreds of cloud applications created by salesforce developers,customers and partners.
+
+Pre-integrated.
+Can add functionality easily and efficiently.
+
+Sandboxes:
+Sandboxes are copies of your organization in a separate environment. They’re used for development and testing. 
+
+
+Installing Apps:
+
+first install apps in a non-production environment like a sandbox or Developer Edition org
+
+If you want to limit access to a particular set of users, plan to modify those user profiles before you install the app.
+
+Apps are installed using something called a package.
+
+From Setup, search and select Installed Packages in the Quick Find box.
+Click the name of the package you installed. It will be the same name from the AppExchange download page.
+Click View Components to see more information about the package. 
+Salesforce Labs -downloading app
+Data Modelling:
+Objects:
+standard objects, custom objects, external objects, platform events, and BigObjects.
+
+Standard Objects: Included in salesforce. Like Account, Contact, Lead, and Opportunity are all standard objects.
+
+Custom Objects:objects that you create to store information that’s specific to your company or industry
+
+
+Build? create? objects
+
+Fields:
+
+Identity, system, and name fields are standard on every object in Salesforce
+Each standard object also comes with a set of prebuilt, standard fields.
+Every field has a data type
+
+Customize-->contacts-->fields
+Customer fields and relationship -->new
+
+Record Types-->New
+
+
+Object Relationships:
+
+Object relationships are a special field type that connects two objects together.
+
+Two main types:
+
+Look up Relationship:
+A lookup relationship essentially links two objects together so that you can “look up” one object from the related items on another object.
+can be one-to-one or one-to-many
+Objects in lookup relationships usually work as stand-alone objects and have their own tabs in the user interface.
+
+On the sidebar, click Fields .
+Click New.
+Choose Lookup Relationship and click Next.
+or Field Name, enter Contact and click Next.
+Click Next, Next, and Save & New.
+
+Master detail Relationship:
+In this type of relationship, one object is the master and another is the detail
+The master object controls certain behaviors of the detail object, like who can view the details data.
+When you’re creating master-detail relationships, you always create the relationship field on the detail object.
+
+Choose Master-Detail Relationship and click Next.
+For Related To, choose Property.
+Click Next.
+For Field Name, enter Property and click Next.
+Click Next, Next, and Save.
+Hierarchical relationships:
+special type of lookup relationship
+The main difference between the two is that hierarchical relationships are only available on the User object.
+
+
+Schema Builder:
+
+Schema Builder is a tool that lets you visualize and edit your data model
+Schema Builder is a handy tool for introducing your Salesforce customizations to a co-worker or explaining the way data flows throughout your system
+
+Creating objects:
+
+
+Creating fields:
+
+
+
+
+
+Sending Mass mails:
+
+
+
