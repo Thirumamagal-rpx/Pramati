@@ -24,7 +24,7 @@ Salesforce is a cloud-based CRM system that allows salespeople to track their sa
 - Data subjects to grant broad consent to processing of their personal data when they register to use a service 
 
 ## Compliance Obligations:  
-- Includes requirements that processors only process personal data in accordance with the controllerís instructions, not share data with other vendors without consent of the controller, and implement appropriate security measures.
+- Includes requirements that processors only process personal data in accordance with the controller‚Äôs instructions, not share data with other vendors without consent of the controller, and implement appropriate security measures.
 
 ## Breach Notification:
 - Data controllers must report any data breach to their data protection authority -no later than 72 hrs.
@@ -37,18 +37,18 @@ Salesforce is a cloud-based CRM system that allows salespeople to track their sa
 -To ensure the organization complies with privacy law.
 
 ## Enforcement:
-- Authorities can fine companies up to the greater of Ä20 million or 4% of a companyís annual global revenue, based on the seriousness of the breach and damages incurred.
+- Authorities can fine companies up to the greater of ‚Ç¨20 million or 4% of a company‚Äôs annual global revenue, based on the seriousness of the breach and damages incurred.
 
 ## Use of processors: 
 - Data controllers must have written agreements with data processors
-- Ensure processors act only in accordance with the controllerís instructions,
+- Ensure processors act only in accordance with the controller‚Äôs instructions,
 - Implement appropriate security measures to protect the data,
 - Assist the controller with its compliance obligations,
 - Return or destroy personal data at the end of the relationship, and 
 - comply with the provisions of GDPR applicable to processors.
 
 ## Profiling:
-- GDPR places certain restrictions on the automated processing of personal data to evaluate a data subjectóor, ìprofiling.î
+- GDPR places certain restrictions on the automated processing of personal data to evaluate a data subject‚Äîor, ‚Äúprofiling.‚Äù
 - Automated processes that can result in a significant impact on an individual
 - Considered high risk and are permitted only in limited cases.
 
@@ -91,7 +91,7 @@ To ensure the personal data it controls is under the compliance with the princip
 
 #### Data controller responsible for:
 - Appointing a data protection officer
-- using the principles of ìprivacy by designî and ìprivacy by default.îusing the principles of ìprivacy by designî and ìprivacy by default.î
+- using the principles of ‚Äúprivacy by design‚Äù and ‚Äúprivacy by default.‚Äùusing the principles of ‚Äúprivacy by design‚Äù and ‚Äúprivacy by default.‚Äù
 - Able to demonstrate compliance.
 
 
@@ -102,7 +102,7 @@ To ensure the personal data it controls is under the compliance with the princip
 - Put appropriate safeguards in place to protect privacy.
 
 ## Privacy by default- 
-- ìprivacy friendlyî default settings when collecting, processing, or storing data.
+- ‚Äúprivacy friendly‚Äù default settings when collecting, processing, or storing data.
 - Individuals choice- How much data is processed- default setting- least amount of processing.
 - Retention period- default setting- shortest possible retention period.
 
@@ -133,8 +133,8 @@ Three mechanisms that Salesforce uses to facilitate cross-border data transfers:
 Binding corporate rules -
 European data protection authorities to facilitate transfers of personal data from the European Economic Area (EEA) to countries outside the EEA.
 The EU-US Privacy Shield and Swiss-US Privacy Shield-
-These are frameworks designed by the US Department of Commerce, along with the European Commission and Swiss government, to provide companies with a mechanism for complying with European data protection requirements when theyíre transferring personal data from Europe to the United States.
-Standard contractual clauses(ìmodel clausesî)- 
+These are frameworks designed by the US Department of Commerce, along with the European Commission and Swiss government, to provide companies with a mechanism for complying with European data protection requirements when they‚Äôre transferring personal data from Europe to the United States.
+Standard contractual clauses(‚Äúmodel clauses‚Äù)- 
 Legal contracts between parties who are transferring personal data from Europe to countries outside the EEA.
 
 Compliance - act of obeying an order
@@ -153,10 +153,10 @@ The next thing to do is identify the core team to work on the compliance effort.
 
 Assess your organization:
 
-Once an organization has assembled its cross-functional team, the team can analyze the organizationís existing privacy and security efforts to identify the top areas of focus.
+Once an organization has assembled its cross-functional team, the team can analyze the organization‚Äôs existing privacy and security efforts to identify the top areas of focus.
 As an organization identifies where it stores this data, the team can build a data inventory that shows, for each storage system, which type of data is stored there, where it came from, what it is used for, who has access to it, how it is secured, which third parties it is transferred to, and how long to keep it. 
 In going through this effort, the team can also identify all the third parties that the organization either receives personal data from, or transfers personal data to.
-From the analysis, organizations can create a register of data processing activities, and identify which activities pose high risks to data privacy. For each high-risk activity, organizations can carry out a data protection impact assessment to determine the actions they need to take to ensure that theyíre properly protecting individual privacy rights.
+From the analysis, organizations can create a register of data processing activities, and identify which activities pose high risks to data privacy. For each high-risk activity, organizations can carry out a data protection impact assessment to determine the actions they need to take to ensure that they‚Äôre properly protecting individual privacy rights.
 
 Establish controls and processes:
 
@@ -207,7 +207,7 @@ Allows different pieces of software to connect to each other and exchange inform
 Without knowing the details, you can connect your apps with other apps or software systems.  The other details of how the information passes through the system is taken care of by other technologies.
 
 Job of Salesforce in API:
- When you add a custom object or field, the platform automatically creates an API name that serves as an access point between your org and the database. Salesforce uses that API name to retrieve the metadata and data youíre looking for.
+ When you add a custom object or field, the platform automatically creates an API name that serves as an access point between your org and the database. Salesforce uses that API name to retrieve the metadata and data you‚Äôre looking for.
 
 
 Setup Area:
@@ -224,7 +224,7 @@ Administration-manage your users and data. Add users, change permissions, import
 Platform Tools-view and manage your data model, create apps, modify the user interface, and deploy new features to your users.
 Manage your code as well.
 
-Settings-Add business hours, change your locale, and view your orgís history.
+Settings-Add business hours, change your locale, and view your org‚Äôs history.
 
 AppExchange:
 
@@ -234,7 +234,7 @@ Pre-integrated.
 Can add functionality easily and efficiently.
 
 Sandboxes:
-Sandboxes are copies of your organization in a separate environment. Theyíre used for development and testing. 
+Sandboxes are copies of your organization in a separate environment. They‚Äôre used for development and testing. 
 
 
 Installing Apps:
@@ -255,7 +255,7 @@ standard objects, custom objects, external objects, platform events, and BigObje
 
 Standard Objects: Included in salesforce. Like Account, Contact, Lead, and Opportunity are all standard objects.
 
-Custom Objects:objects that you create to store information thatís specific to your company or industry
+Custom Objects:objects that you create to store information that‚Äôs specific to your company or industry
 
 
 Build? create? objects
@@ -279,7 +279,7 @@ Object relationships are a special field type that connects two objects together
 Two main types:
 
 Look up Relationship:
-A lookup relationship essentially links two objects together so that you can ìlook upî one object from the related items on another object.
+A lookup relationship essentially links two objects together so that you can ‚Äúlook up‚Äù one object from the related items on another object.
 can be one-to-one or one-to-many
 Objects in lookup relationships usually work as stand-alone objects and have their own tabs in the user interface.
 
@@ -292,7 +292,7 @@ Click Next, Next, and Save & New.
 Master detail Relationship:
 In this type of relationship, one object is the master and another is the detail
 The master object controls certain behaviors of the detail object, like who can view the details data.
-When youíre creating master-detail relationships, you always create the relationship field on the detail object.
+When you‚Äôre creating master-detail relationships, you always create the relationship field on the detail object.
 
 Choose Master-Detail Relationship and click Next.
 For Related To, choose Property.
