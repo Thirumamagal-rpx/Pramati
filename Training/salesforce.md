@@ -194,56 +194,50 @@ Impact on only a few departments
 Salesforce- data secure
 Is a cloud service
 
+## Metadata:
+
+- All of the standard and custom configurations, functionality, and code in your org are metadata.
+
+- Salesforce knows how to store and serve you that metadata immediately after you create it. - To move fast in platform.
 
 
+## API:(Application Programming Interface)
 
+- Allows different pieces of software to connect to each other and exchange information.
 
+- Without knowing the details, you can connect your apps with other apps or software systems.  The other details of how the information passes through the system is taken care of by other technologies.
 
-Metadata:
+## Job of Salesforce in API:
+ - When you add a custom object or field, the platform automatically creates an API name that serves as an access point between your org and the database. Salesforce uses that API name to retrieve the metadata and data you’re looking for.
 
-All of the standard and custom configurations, functionality, and code in your org are metadata.
+### Setup Area:
 
-Salesforce knows how to store and serve you that metadata immediately after you create it. - To move fast in platform.
+- Object Manager
+- Setup Menu
+- Main window
 
+## Setup Menu:
 
-API:(Application Programming Interface)
+- Administration
+	-manage your users and data. Add users, change permissions, import and export data, and create email templates.
 
-Allows different pieces of software to connect to each other and exchange information.
+- Platform Tools
+	-view and manage your data model, create apps, modify the user interface, and deploy new features to your users.
+	-Manage your code as well.
 
-Without knowing the details, you can connect your apps with other apps or software systems.  The other details of how the information passes through the system is taken care of by other technologies.
+- Settings
+	-Add business hours, change your locale, and view your org’s history.
 
-Job of Salesforce in API:
- When you add a custom object or field, the platform automatically creates an API name that serves as an access point between your org and the database. Salesforce uses that API name to retrieve the metadata and data you’re looking for.
+## AppExchange:
 
+- Hundreds of cloud applications created by salesforce developers,customers and partners.
+- Pre-integrated.
+- Can add functionality easily and efficiently.
 
-Setup Area:
+## Sandboxes:
+- Sandboxes are copies of your organization in a separate environment. They’re used for development and testing. 
 
-Object Manager
-Setup Menu
-Main window
-
-
-Setup Menu:
-
-Administration-manage your users and data. Add users, change permissions, import and export data, and create email templates.
-
-Platform Tools-view and manage your data model, create apps, modify the user interface, and deploy new features to your users.
-Manage your code as well.
-
-Settings-Add business hours, change your locale, and view your org’s history.
-
-AppExchange:
-
-Hundreds of cloud applications created by salesforce developers,customers and partners.
-
-Pre-integrated.
-Can add functionality easily and efficiently.
-
-Sandboxes:
-Sandboxes are copies of your organization in a separate environment. They’re used for development and testing. 
-
-
-Installing Apps:
+## Installing Apps:
 
 first install apps in a non-production environment like a sandbox or Developer Edition org
 
@@ -254,9 +248,11 @@ Apps are installed using something called a package.
 From Setup, search and select Installed Packages in the Quick Find box.
 Click the name of the package you installed. It will be the same name from the AppExchange download page.
 Click View Components to see more information about the package. 
+
 Salesforce Labs -downloading app
-Data Modelling:
-Objects:
+
+# Data Modelling:
+## Objects:
 standard objects, custom objects, external objects, platform events, and BigObjects.
 
 Standard Objects: Included in salesforce. Like Account, Contact, Lead, and Opportunity are all standard objects.
@@ -266,7 +262,7 @@ Custom Objects:objects that you create to store information that’s specific to
 
 Build? create? objects
 
-Fields:
+## Fields:
 
 Identity, system, and name fields are standard on every object in Salesforce
 Each standard object also comes with a set of prebuilt, standard fields.
@@ -278,28 +274,28 @@ Customer fields and relationship -->new
 Record Types-->New
 
 
-Object Relationships:
+## Object Relationships:
 
 Object relationships are a special field type that connects two objects together.
 
 Two main types:
 
-Look up Relationship:
+- Look up Relationship:
 A lookup relationship essentially links two objects together so that you can “look up” one object from the related items on another object.
 can be one-to-one or one-to-many
 Objects in lookup relationships usually work as stand-alone objects and have their own tabs in the user interface.
-
+```
 On the sidebar, click Fields .
 Click New.
 Choose Lookup Relationship and click Next.
 or Field Name, enter Contact and click Next.
 Click Next, Next, and Save & New.
-
-Master detail Relationship:
+```
+- Master detail Relationship:
 In this type of relationship, one object is the master and another is the detail
 The master object controls certain behaviors of the detail object, like who can view the details data.
 When you’re creating master-detail relationships, you always create the relationship field on the detail object.
-
+``
 Choose Master-Detail Relationship and click Next.
 For Related To, choose Property.
 Click Next.
@@ -308,14 +304,14 @@ Click Next, Next, and Save.
 Hierarchical relationships:
 special type of lookup relationship
 The main difference between the two is that hierarchical relationships are only available on the User object.
+```
 
-
-Schema Builder:
+## Schema Builder:
 
 Schema Builder is a tool that lets you visualize and edit your data model
 Schema Builder is a handy tool for introducing your Salesforce customizations to a co-worker or explaining the way data flows throughout your system
 
-Creating objects:
+## Creating objects:
 
 
 Creating fields:
