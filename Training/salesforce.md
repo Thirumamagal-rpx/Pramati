@@ -347,7 +347,12 @@ Ex:  - same name but different email addresses
 
 ## Validations:
 
+# Data Visibility
 ## Record Types:
+- That collect and manage data about an object.
+	- Business processes -> Represented by special pick list fields that captures lifecycle of a standard object.
+	- page layouts -> selects an organised group of fields related to an object.
+	-picklist values -> Lists of choices that you define when you create a picklist field.
 
 ## Roll-up summary fields:
 
@@ -370,6 +375,8 @@ Ex:  - same name but different email addresses
 - Use special picklist values for your search criteria. 
 - Have values of either True or False.
 
+### Filter Operators:
+
 
 ## Organize Records with Tags and Topics
 
@@ -380,6 +387,37 @@ filter list views.
 
 - Tags are words or short phrases that you can associate with most Salesforce records
 to describe and organize their data in a personalized way.
+
+## Salesforce 1:
+
+- Salesforce1 uses your organization’s Salesforce edition, your user license type, and your assigned user profile and permission sets to
+determine the data that’s available 
+
+### Collaborate :
+
+- Switch and sort your fields
+- Post to a feed
+- Like or comment on a post
+- Mention peaople and groups in posts
+- Post a link
+- Add a poll
+- Vote on a poll
+- Search within a Feed
+- Bookmark posts
+
+### Work with Records
+### Manage Relationships and data
+
+## Kanban:
+
+- The Kanban view displays a visual summary for a selection of records.
+- By seeing all your records at once, you can more effectively monitor your work and keep deals moving forward.
+
+
+
+
+
+
 
 
 
