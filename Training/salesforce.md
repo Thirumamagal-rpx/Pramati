@@ -343,6 +343,45 @@ Ex:  - same name but different email addresses
 - Org uses personal Account -> Individual Import personal Account --> 50000 or fewer records.
 - Data to other objects -> If more than 50000 accounts ->use Data Loader or third party app.
 
+# 22-11-2018
+
+## Validations:
+
+## Record Types:
+
+## Roll-up summary fields:
+
+- Summarize detailed records in Master-detail relationships.
+	- COUNT
+	- SUM
+	- MIN
+	- MAX
+	
+## List views and Filters:
+
+### Lookups:
+ 
+- lookup icon automatically displays when you choose to filter on one of the special picklists
+ 
+### Creating new view:
+
+### Filters that use a special picklist values:
+
+- Use special picklist values for your search criteria. 
+- Have values of either True or False.
+
+
+## Organize Records with Tags and Topics
+
+- Topics are words or phrases that you can associate with Salesforce records to organize them around
+common themes. 
+- Use topics to group records by a common theme, and then use those topics to
+filter list views.
+
+- Tags are words or short phrases that you can associate with most Salesforce records
+to describe and organize their data in a personalized way.
+
+
 
 
 
