@@ -343,8 +343,6 @@ Ex:  - same name but different email addresses
 - Org uses personal Account -> Individual Import personal Account --> 50000 or fewer records.
 - Data to other objects -> If more than 50000 accounts ->use Data Loader or third party app.
 
-# 22-11-2018
-
 ## Validations:
 
 # Data Visibility
