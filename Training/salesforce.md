@@ -7,11 +7,11 @@ Salesforce is a cloud-based CRM system that allows salespeople to track their sa
 
 #### Terms in salesforce:
 ```
-	- Apps-----set of objects, fields, and other functionality that supports a business process.
-	- Objects---- tables in salesforce database which stores information
-	- Records---- Rows in object database tables.
-	- Fields----columns in object database tables.
-	- Release----Salesforce releases new products and features three times per year
+ - Apps-----set of objects, fields, and other functionality that supports a business process.
+ - Objects---- tables in salesforce database which stores information
+ - Records---- Rows in object database tables.
+ - Fields----columns in object database tables.
+ - Release----Salesforce releases new products and features three times per year
 ```
 
 #### General Data Privacy Regulation (GDPR):
