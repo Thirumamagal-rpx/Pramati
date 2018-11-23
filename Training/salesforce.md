@@ -269,6 +269,7 @@ Click View Components to see more information about the package.
 Salesforce Labs -downloading app
 
 # Data Modelling:
+- Build custom reports and dashboards using the data in your custom objects.
 ## Objects:
 standard objects, custom objects, external objects, platform events, and BigObjects.
 
@@ -276,8 +277,7 @@ Standard Objects: Included in salesforce. Like Account, Contact, Lead, and Oppor
 
 Custom Objects:objects that you create to store information that’s specific to your company or industry
 
-
-Build? create? objects
+Build--> create--> objects
 
 ## Fields:
 
@@ -293,7 +293,9 @@ Record Types-->New
 
 ## Object Relationships:
 
-Object relationships are a special field type that connects two objects together.
+- Object relationships are a special field type that connects two objects together.
+- Establish object relationships first before adding all custom fields, page layouts, and related lists
+- Each custom object can have up to two master-detail relationships and up to 25 total relationships.
 
 Two main types:
 
@@ -312,6 +314,13 @@ Click Next, Next, and Save & New.
 In this type of relationship, one object is the master and another is the detail
 The master object controls certain behaviors of the detail object, like who can view the details data.
 When you’re creating master-detail relationships, you always create the relationship field on the detail object.
+
+## Creating master-detail Relationship:
+
+- Determine whether the custom object already contains data. 
+- If you delete the data in your custom object, you can define the relationship. If you cannot delete the data in your custom object, create a lookup relationship first and then populate the lookup reference field in each record with a valid value.
+- Next, click Edit by the relationship and convert it to a master-detail relationship.-
+
 ```
 Choose Master-Detail Relationship and click Next.
 For Related To, choose Property.
@@ -481,6 +490,8 @@ apps.
 - Matrix Reports
 - Joined Reports
 - Buckets -> defining multiple categories used to group report values.
+
+
 
 
 
