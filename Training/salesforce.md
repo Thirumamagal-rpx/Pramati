@@ -333,10 +333,20 @@ Creating fields:
 Sending Mass mails:
 
 ## User Accounts:
-```
-Each person who accesses Salesforce must have a user account. The user account identifies the user. Settings for the user account
-determine what features and records the user can access
-```
+
+ - Each person who accesses Salesforce must have a user account. The user account identifies the user. 
+ - Settings for the user account determine what features and records the user can access.
+
+### Terms :
+
+User Names - When you set up a new user, you must enter both a username and an email address for that user. Both the username and the 			email address must be in the form of an email address
+User License -
+Profiles  -> Most Common profiles:
+  - System Administrator -  Users with this profile can configure and customize the application.
+  - Standard User -  Users with this profile can create and edit most records, and run reports.
+  - Read only - 
+Roles
+
 # Import your data:
 
 - Complete this task using Data Import Wizard.
@@ -434,8 +444,43 @@ determine the data that’s available
 
 - can change the default action of some standard buttons.
 
+## Wave Analytics:
+- Business intelligence (BI) platform from Salesforce.com that is optimized for mobile access and data visualization.
+### Two basic catagories:
+- Users-> who view Wave dashboards, lenses, and datasets and occasionally import data to Wave.
+- Administors or Managers->  who access to the full range of Wave functionality to create apps,dashboards, lenses, and datasets, edit data, and otherwise customize the Wave experience.
 
+Two basic permission sets:
+- view ->  permissions needed by most basic-level users when they access Wave.
+- Manage ->  permissions to use all Wave features.
 
+### Wave Analytics Security Implementation Guide:
+- Wave Analytics has different levels of security that your organization can implement to ensure that the right user has access to the right data
+- Provides a robust row-level security feature that enables you to model many different types of access controls on datasets.
+   - The administrator can implement object-level and field-level security to control access to Salesforce data.
+   - Dataset owners can implement row-level security on each dataset that they create to restrict access to it’s records. 
+   - App owners, administrators, and users granted manager access to an app control access to datasets, lenses, and dashboards within
+apps. 
+
+### Sales wave Analytics
+### Service wave Analytics
+
+# Salesforce Reports and Dashboard:
+## Reports:
+- A report returns a set of records that meets certain criteria, and displays it in organized rows and columns
+   - Report types are the templates from which users build reports, which organize data and are shared via folders.
+   - A report type defines the set of records and fields available to a report based on the relationships between a primary object and its related objects. 
+
+## DashBoard:
+- A dashboard shows data from source reports as visual components, which can be charts, gauges, tables, metrics, or Visualforce pages. 
+
+## Folder:
+- A folder is a place where you can store reports, dashboards, documents, or email templates
+
+## Building Reports:
+- Matrix Reports
+- Joined Reports
+- Buckets -> defining multiple categories used to group report values.
 
 
 
