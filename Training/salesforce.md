@@ -14,6 +14,23 @@ Salesforce is a cloud-based CRM system that allows salespeople to track their sa
  - Release----Salesforce releases new products and features three times per year
 ```
 
+### Salesforce standard Objects:
+
+- Leads
+   - people interested in your products or services.
+   - After that pushed into Accounts, contacts and Oppurtunities.
+- Accounts
+   - Companies you have relationship with.
+- Contacts 
+   - People in account who matters to your business.
+- Opportunities
+   - Potential revenue-generating deals.
+       -Qualification
+       -Discovery
+       -Proposal 
+       -Negotiation
+       -won/Lost
+       
 #### General Data Privacy Regulation (GDPR):
 ```
 - Establishes rules for how companies, governments, and other entities can process the personal data of data subjects who are in the EU(European Union)
@@ -411,6 +428,11 @@ determine the data that’s available
 - The Kanban view displays a visual summary for a selection of records.
 - By seeing all your records at once, you can more effectively monitor your work and keep deals moving forward.
 
+## Building a simple workflow:
+
+## Visualforce page:
+
+- can change the default action of some standard buttons.
 
 
 
