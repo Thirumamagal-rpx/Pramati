@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200409 13:33:43.239" rpa="false">
+<suite id="s1" name="ApiTesting" source="C:\Users\Thirumamagal\eclipse-workspace\ApiTesting">
+<suite id="s1-s1" name="ApiTest" source="C:\Users\Thirumamagal\eclipse-workspace\ApiTesting\ApiTest">
+<suite id="s1-s1-s1" name="OAuth1" source="C:\Users\Thirumamagal\eclipse-workspace\ApiTesting\ApiTest\OAuth1.robot">
+<test id="s1-s1-s1-t1" name="Post Request With Client Credentials">
+<kw name="Create Client Oauth2 Session" library="ExtendedRequestsLibrary">
+<doc>Create and return an [http://goo.gl/VehoOR|OAuth2] session object to a server
+with [https://goo.gl/EJsqun|client credentials] authorization grant
+[https://goo.gl/YjNlJf|access token].</doc>
+<arguments>
+<arg>client</arg>
+<arg>https://token</arg>
+<arg>key</arg>
+<arg>secret</arg>
+<arg>base_url=https://service</arg>
+</arguments>
+<msg timestamp="20200409 13:33:50.667" level="FAIL">ConnectionError: HTTPSConnectionPool(host='service', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x0465E790&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<status status="FAIL" starttime="20200409 13:33:45.068" endtime="20200409 13:33:50.668"></status>
+</kw>
+<status status="FAIL" starttime="20200409 13:33:45.067" endtime="20200409 13:33:50.669" critical="yes">ConnectionError: HTTPSConnectionPool(host='service', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x0465E790&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</test>
+<test id="s1-s1-s1-t2" name="Post Request With Password">
+<kw name="Create Password Oauth2 Session" library="ExtendedRequestsLibrary">
+<doc>Create and return an [http://goo.gl/VehoOR|OAuth2] session object to a server with
+[https://goo.gl/N9R62O|resource owner password credentials] authorization grant
+[https://goo.gl/YjNlJf|access token].</doc>
+<arguments>
+<arg>member</arg>
+<arg>https://token</arg>
+<arg>key</arg>
+<arg>secret</arg>
+<arg>usn</arg>
+<arg>pwd</arg>
+<arg>base_url=https://service</arg>
+</arguments>
+<msg timestamp="20200409 13:33:56.287" level="FAIL">ConnectionError: HTTPSConnectionPool(host='service', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x046A80A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<status status="FAIL" starttime="20200409 13:33:50.674" endtime="20200409 13:33:56.288"></status>
+</kw>
+<status status="FAIL" starttime="20200409 13:33:50.671" endtime="20200409 13:33:56.289" critical="yes">ConnectionError: HTTPSConnectionPool(host='service', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x046A80A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</test>
+<status status="FAIL" starttime="20200409 13:33:44.825" endtime="20200409 13:33:56.291"></status>
+</suite>
+<status status="FAIL" starttime="20200409 13:33:44.821" endtime="20200409 13:33:56.299"></status>
+</suite>
+<status status="FAIL" starttime="20200409 13:33:44.788" endtime="20200409 13:33:56.306"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" id="s1" name="ApiTesting">ApiTesting</stat>
+<stat pass="0" fail="2" id="s1-s1" name="ApiTest">ApiTesting.ApiTest</stat>
+<stat pass="0" fail="2" id="s1-s1-s1" name="OAuth1">ApiTesting.ApiTest.OAuth1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="requests" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/requests/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/RequestsLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="JSONLibrary" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/JSONLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="httplib2" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/httplib2/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="oauth2client" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/oauth2client/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="ExtendedRequestsLibrary" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/ExtendedRequestsLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="oauthlib" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/oauthlib/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="requests_oauthlib" path="C:/Users/Thirumamagal/Python/Python38-32/Lib/site-packages/requests_oauthlib/__init__.py" dynamic="false"/>
+    <pythonpath/>
+    <classpath/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+</projectConfiguration>

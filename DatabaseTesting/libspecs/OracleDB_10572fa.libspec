@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="OracleDB" type="library" format="ROBOT" generated="20200410 15:48:42">
+<version></version>
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>Robot Framework library for working with Oracle DB.
+
+== Dependencies ==
+| cx_Oracle | http://cx-oracle.sourceforge.net | version &gt;= 5.3 |
+| robot framework | http://robotframework.org |</doc>
+<kw name="Close All Oracle Connections">
+<arguments>
+</arguments>
+<doc>Close all Oracle connections that were opened.
+You should not use [#Disconnect From Oracle|Disconnect From Oracle] and [#Close All Oracle Connections|Close All Oracle Connections]
+together.
+After calling this keyword connection IDs returned by opening new connections [#Connect To Oracle|Connect To Oracle],
+will start from 1.
+
+*Example:*
+
+    | Connect To Oracle  |  rb60db  |  bis |   password  |  alias=bis |
+    | Connect To Oracle  |  rb60db  |  bis_dcs  |  password  |  alias=bis_dsc |
+    | Switch Oracle Connection  |  bis |
+    | @{sql_out_bis}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | Switch Oracle Connection  |  bis_dsc |
+    | @{sql_out_bis_dsc}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | Close All Oracle Connections |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Connect To Oracle">
+<arguments>
+<arg>dbname: str</arg>
+<arg>dbusername: str</arg>
+<arg>dbpassword: str=None</arg>
+<arg>alias: str=None</arg>
+</arguments>
+<doc>Connection to Oracle DB.
+
+*Args:*
+
+    _dbname_ - database name;
+
+    _dbusername_ - username for db connection;
+
+    _dbpassword_ - password for db connection;
+
+    _alias_ - connection alias, used for switching between open connections;
+
+
+*Returns:*
+
+    Returns ID of the new connection. The connection is set as active.
+
+*Example:*
+
+    | Connect To Oracle  |  rb60db  |  bis  |  password |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Disconnect From Oracle">
+<arguments>
+</arguments>
+<doc>Close active Oracle connection.
+
+*Example:*
+
+    | Connect To Oracle  |  rb60db  |  bis  |  password |
+    | Disconnect From Oracle |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Execute Plsql Block">
+<arguments>
+<arg>plsqlstatement: str</arg>
+<arg>**params: typing.Any</arg>
+</arguments>
+<doc>PL/SQL block execution.
+
+*Args:*
+
+    _plsqlstatement_ - PL/SQL block;
+
+    _params_ - PL/SQL block parameters;
+
+
+*Raises:*
+
+    PLSQL Error: Error message encoded according to DB where the code was run
+
+*Returns:*
+
+    PL/SQL block execution result.
+
+*Example:*
+
+    | *Settings* | *Value* |
+    | Library    |       OracleDB |
+
+    | *Variables* | *Value* |
+    | ${var_failed}    |       3 |
+
+    | *Test Cases* | *Action* | *Argument* | *Argument* | *Argument* |
+    | Simple |
+    |    | ${statement}=  |  catenate   |   SEPARATOR=\r\n  |    DECLARE  |
+    |    | ...            |             |                     |       a NUMBER := ${var_failed}; |
+    |    | ...            |             |                     |    BEGIN |
+    |    | ...            |             |                     |       a := a + 1; |
+    |    | ...            |             |                     |       if a = 4 then |
+    |    | ...            |             |                     |         raise_application_error ( -20001, 'This is a custom error' ); |
+    |    | ...            |             |                     |       end if; |
+    |    | ...            |             |                     |    END; |
+    |    | Execute Plsql Block   |  plsqlstatement=${statement} |
+    =&gt;
+
+    DatabaseError: ORA-20001: This is a custom error
+
+    |    | ${statement}=  |  catenate   |   SEPARATOR=\r\n  |    DECLARE  |
+    |    | ...            |             |                     |       a NUMBER := :var; |
+    |    | ...            |             |                     |    BEGIN |
+    |    | ...            |             |                     |       a := a + 1; |
+    |    | ...            |             |                     |       if a = 4 then |
+    |    | ...            |             |                     |         raise_application_error ( -20001, 'This is a custom error' ); |
+    |    | ...            |             |                     |       end if; |
+    |    | ...            |             |                     |    END; |
+    |    | Execute Plsql Block   |  plsqlstatement=${statement} | var=${var_failed} |
+    =&gt;
+
+    DatabaseError: ORA-20001: This is a custom error</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Execute Plsql Block With Dbms Output">
+<arguments>
+<arg>plsqlstatement: str</arg>
+<arg>**params: typing.Any</arg>
+</arguments>
+<doc>Execute PL/SQL block with dbms_output().
+
+*Args:*
+
+    _plsqlstatement_ - PL/SQL block;
+
+    _params_ - PL/SQL block parameters;
+
+
+*Raises:*
+
+    PLSQL Error: Error message encoded according to DB where the code was run.
+
+*Returns:*
+
+    List of values returned by Oracle dbms_output.put_line().
+
+*Example:*
+
+    | *Settings* | *Value* |
+    | Library    |       OracleDB |
+
+    | *Variables* | *Value* |
+    | ${var}    |       4 |
+
+    | *Test Cases* | *Action* | *Argument* | *Argument* | *Argument* |
+    | Simple |
+    |    | ${statement}=  |  catenate   |   SEPARATOR=\r\n  |    DECLARE  |
+    |    | ...            |             |                     |       a NUMBER := ${var}; |
+    |    | ...            |             |                     |    BEGIN |
+    |    | ...            |             |                     |       a := a + 1; |
+    |    | ...            |             |                     |       if a = 4 then |
+    |    | ...            |             |                     |         raise_application_error ( -20001, 'This is a custom error' ); |
+    |    | ...            |             |                     |       end if; |
+    |    | ...            |             |                     |       dbms_output.put_line ('text '||a||', e-mail text'); |
+    |    | ...            |             |                     |       dbms_output.put_line ('string 2 '); |
+    |    | ...            |             |                     |    END; |
+    |    | @{dbms}=       | Execute Plsql Block With Dbms Output   |  plsqlstatement=${statement} |
+    =&gt;
+
+    | @{dbms} | text 5, e-mail text |
+    | | string 2 |
+
+    |    | ${statement}=  |  catenate   |   SEPARATOR=\r\n  |    DECLARE  |
+    |    | ...            |             |                     |       a NUMBER := :var; |
+    |    | ...            |             |                     |    BEGIN |
+    |    | ...            |             |                     |       a := a + 1; |
+    |    | ...            |             |                     |       if a = 4 then |
+    |    | ...            |             |                     |         raise_application_error ( -20001, 'This is a custom error' ); |
+    |    | ...            |             |                     |       end if; |
+    |    | ...            |             |                     |       dbms_output.put_line ('text '||a||', e-mail text'); |
+    |    | ...            |             |                     |       dbms_output.put_line ('string 2 '); |
+    |    | ...            |             |                     |    END; |
+    |    | @{dbms}=       | Execute Plsql Block With Dbms Output   |  plsqlstatement=${statement} |  var=${var} |
+    =&gt;
+
+    | @{dbms} | text 5, e-mail text |
+    | | string 2 |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Execute Plsql Script">
+<arguments>
+<arg>file_path: str</arg>
+<arg>**params: typing.Any</arg>
+</arguments>
+<doc> Execution of PL/SQL code from file.
+
+*Args:*
+
+    _file_path_ - path to PL/SQL script file;
+
+    _params_ - PL/SQL code parameters;
+
+
+*Raises:*
+
+    PLSQL Error: Error message encoded according to DB where the code was run.
+
+*Example:*
+
+    |  Execute Plsql Script  |  ${CURDIR}${/}plsql_script.sql |
+    |  Execute Plsql Script  |  ${CURDIR}${/}plsql_script.sql | first_param=1 | second_param=2 |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Execute Sql String">
+<arguments>
+<arg>plsqlstatement: str</arg>
+<arg>**params: typing.Any</arg>
+</arguments>
+<doc>Execute PL/SQL string.
+
+*Args:*
+
+    _plsqlstatement_ - PL/SQL string;
+
+    _params_ - PL/SQL string parameters;
+
+
+*Raises:*
+
+    PLSQL Error: Error message encoded according to DB where the code was run.
+
+*Returns:*
+
+    PL/SQL string execution result.
+
+*Example:*
+
+    | @{query}= | Execute Sql String | select sysdate, sysdate+1 from dual |
+    | Set Test Variable  |  ${sys_date}  |  ${query[0][0]} |
+    | Set Test Variable  |  ${next_date}  |  ${query[0][1]} |
+
+    | @{query}= | Execute Sql String | select sysdate, sysdate+:d from dual | d=1 |
+    | Set Test Variable  |  ${sys_date}  |  ${query[0][0]} |
+    | Set Test Variable  |  ${next_date}  |  ${query[0][1]} |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Execute Sql String Generator">
+<arguments>
+<arg>sql_statement: str</arg>
+<arg>**params: typing.Any</arg>
+</arguments>
+<doc>Generator that yields each result row mapped as a dict with column names as keys.
+
+Intended for use mainly in code for other keywords.
+*If used, the generator must be explicitly closed before closing DB connection*
+
+*Args:*
+
+    _sql_statement_ - PL/SQL string;
+
+    _params_ - PL/SQL string parameters;
+
+
+Yields:*
+
+    results dict.</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Execute Sql String Mapped">
+<arguments>
+<arg>sql_statement: str</arg>
+<arg>**params: typing.Any</arg>
+</arguments>
+<doc>SQL query execution where each result row is mapped as a dict with column names as keys.
+
+*Args:*
+
+    _sql_statement_ - PL/SQL string;
+
+    _params_ - PL/SQL string parameters;
+
+
+*Returns:*
+
+    A list of dictionaries where column names are mapped as keys.
+
+*Example:*
+
+    | @{query}= | Execute Sql String Mapped| select sysdate, sysdate+1 from dual |
+    | Set Test Variable  |  ${sys_date}  |  ${query[0][sysdate]} |
+    | Set Test Variable  |  ${next_date}  |  ${query[0][sysdate1]} |
+
+    | @{query}= | Execute Sql String Mapped| select sysdate, sysdate+:d from dual | d=1 |
+    | Set Test Variable  |  ${sys_date}  |  ${query[0][sysdate]} |
+    | Set Test Variable  |  ${next_date}  |  ${query[0][sysdate1]} |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Make Dsn">
+<arguments>
+<arg>host: str</arg>
+<arg>port: str</arg>
+<arg>sid: str</arg>
+<arg>service_name: str=</arg>
+</arguments>
+<doc>Build dsn string for use in connection.
+
+*Args:*
+
+    host - database host;
+
+    port - database port;
+
+    sid - database sid;
+
+    service_name - database service name;
+
+
+*Returns:*
+
+    Returns dsn string.</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Result Logger">
+<arguments>
+<arg>query_result: typing.List[typing.Any]</arg>
+<arg>result_amount: int=10</arg>
+</arguments>
+<doc>Log first n rows from the query results
+
+*Args:*
+
+    _query_result_ - query result to log, must be greater than 0
+    _result_amount_ - amount of entries to display from result</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Switch Oracle Connection">
+<arguments>
+<arg>index_or_alias: typing.Union[int, str]</arg>
+</arguments>
+<doc>Switch between existing Oracle connections using their connection IDs or aliases.
+The connection ID is obtained on creating connection.
+Connection alias is optional and can be set at connecting to DB [#Connect To Oracle|Connect To Oracle].
+
+*Args:*
+
+    _index_or_alias_ - connection ID or alias assigned to connection;
+
+*Returns:*
+
+    ID of the previous connection.
+
+*Example:* (switch by alias)
+
+    | Connect To Oracle  |  rb60db  |  bis |   password  |  alias=bis |
+    | Connect To Oracle  |  rb60db  |  bis_dcs  |  password  |  alias=bis_dsc |
+    | Switch Oracle Connection  |  bis |
+    | @{sql_out_bis}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | Switch Oracle Connection  |  bis_dsc |
+    | @{sql_out_bis_dsc}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | Close All Oracle Connections |
+    =&gt;
+
+    @{sql_out_bis} = BIS
+
+    @{sql_out_bis_dcs}= BIS_DCS
+
+*Example:* (switch by index)
+
+    | ${bis_index}=  |  Connect To Oracle  |  rb60db  |  bis  |  password  |
+    | ${bis_dcs_index}=  |  Connect To Oracle  |  rb60db  |  bis_dcs  |  password |
+    | @{sql_out_bis_dcs_1}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | ${previous_index}=  |  Switch Oracle Connection  |  ${bis_index} |
+    | @{sql_out_bis}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | Switch Oracle Connection  |  ${previous_index} |
+    | @{sql_out_bis_dcs_2}=  |  Execute Sql String  |  select SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') from dual |
+    | Close All Oracle Connections |
+    =&gt;
+
+    ${bis_index}= 1
+
+    ${bis_dcs_index}= 2
+
+    @{sql_out_bis_dcs_1} = BIS_DCS
+
+    ${previous_index}= 2
+
+    @{sql_out_bis} = BIS
+
+    @{sql_out_bis_dcs_2}= BIS_DCS</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Use Connection">
+<arguments>
+<arg>*args</arg>
+<arg>**kwds</arg>
+</arguments>
+<doc>Context manager for switching connection.
+
+Args:
+    conn_index: Connection index or alias to switch.
+
+Yields: generator.</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Wrap Into Html Details">
+<arguments>
+<arg>statement: str</arg>
+<arg>summary: str</arg>
+</arguments>
+<doc>Format statement for html logging.
+
+*Args:*
+
+    _statement_: statement to log.
+    _summary_: summary for details tag.
+
+*Returns:*
+
+    Formatted statement.</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>
